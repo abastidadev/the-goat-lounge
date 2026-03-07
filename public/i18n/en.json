@@ -1,0 +1,51 @@
+{
+  "shared": {
+    "nav": {
+      "home": "Home",
+      "menu": "Menu",
+      "contact": "Contact"
+    },
+    "actions": {
+      "learnMore": "Learn more",
+      "viewMenu": "View menu",
+      "getInTouch": "Get in touch"
+    }
+  },
+  "general": {
+    "applicationName": "THE GOAT LOUNGE",
+    "tagline": "Shisha and craft cocktails",
+    "languages": {
+      "es": "Spanish",
+      "en": "English"
+    }
+  },
+  "pages": {
+    "home": {
+      "hero": {
+        "title": "Welcome to THE GOAT LOUNGE",
+        "subtitle": "The ultimate experience in shisha and craft cocktails",
+        "cta": "Discover our menu"
+      },
+      "placeholder": "Home page - Under development"
+    },
+    "menu": {
+      "title": "Our Menu",
+      "placeholder": "Menu page - Under development",
+      "sections": {
+        "shisha": "Shisha",
+        "cocktails": "Cocktails",
+        "drinks": "Drinks"
+      }
+    },
+    "contact": {
+      "title": "Contact",
+      "placeholder": "Contact page - Under development",
+      "info": "Contact information coming soon"
+    },
+    "notFound": {
+      "title": "Page not found",
+      "message": "Sorry, the page you're looking for doesn't exist.",
+      "action": "Back to home"
+    }
+  }
+}
