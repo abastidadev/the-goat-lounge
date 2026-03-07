@@ -1,0 +1,51 @@
+{
+  "shared": {
+    "nav": {
+      "home": "Inicio",
+      "menu": "Menú",
+      "contact": "Contacto"
+    },
+    "actions": {
+      "learnMore": "Saber más",
+      "viewMenu": "Ver menú",
+      "getInTouch": "Contactar"
+    }
+  },
+  "general": {
+    "applicationName": "THE GOAT LOUNGE",
+    "tagline": "Shisha y cócteles de autor",
+    "languages": {
+      "es": "Español",
+      "en": "English"
+    }
+  },
+  "pages": {
+    "home": {
+      "hero": {
+        "title": "Bienvenido a THE GOAT LOUNGE",
+        "subtitle": "La experiencia definitiva en shishas y cócteles artesanales",
+        "cta": "Descubre nuestro menú"
+      },
+      "placeholder": "Página de inicio - En desarrollo"
+    },
+    "menu": {
+      "title": "Nuestro Menú",
+      "placeholder": "Página de menú - En desarrollo",
+      "sections": {
+        "shisha": "Shishas",
+        "cocktails": "Cócteles",
+        "drinks": "Bebidas"
+      }
+    },
+    "contact": {
+      "title": "Contacto",
+      "placeholder": "Página de contacto - En desarrollo",
+      "info": "Información de contacto próximamente"
+    },
+    "notFound": {
+      "title": "Página no encontrada",
+      "message": "Lo sentimos, la página que buscas no existe.",
+      "action": "Volver al inicio"
+    }
+  }
+}
