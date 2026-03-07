@@ -1,0 +1,48 @@
+<section id="shisha" class="py-24 bg-black">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-4 italic">
+        {{ 'pages.home.atmosphere.title' | transloco }}
+      </h2>
+      <p class="text-gray-400 text-lg max-w-2xl mx-auto mb-6">
+        {{ 'pages.home.atmosphere.subtitle' | transloco }}
+      </p>
+      <div class="w-24 h-1 bg-gold-500 mx-auto"></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      @for (image of galleryImages; track image.key) {
+        <div
+          class="relative group overflow-hidden rounded-lg border border-gold-500/20 aspect-[4/5]"
+        >
+          <!-- Real Image -->
+          <img
+            [src]="'/assets/images/' + image.key + '.webp'"
+            [alt]="'pages.home.atmosphere.' + image.key | transloco"
+            class="absolute inset-0 w-full h-full object-cover"
+            loading="lazy"
+          />
+
+          <!-- Gradient Overlay -->
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-70 group-hover:opacity-50 transition-opacity duration-500"
+          ></div>
+
+          <!-- Label -->
+          <div class="absolute bottom-0 left-0 right-0 p-6 z-10">
+            <h3
+              class="text-2xl font-serif font-bold text-white italic group-hover:text-gold-400 transition-colors"
+            >
+              {{ 'pages.home.atmosphere.' + image.key | transloco }}
+            </h3>
+          </div>
+
+          <!-- Hover Overlay -->
+          <div
+            class="absolute inset-0 border-2 border-gold-500/0 group-hover:border-gold-500/60 rounded-lg transition-all duration-300 z-10"
+          ></div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

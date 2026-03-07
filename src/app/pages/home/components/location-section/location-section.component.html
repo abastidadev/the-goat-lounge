@@ -1,0 +1,74 @@
+<!-- Mixology/Location Section -->
+<section id="mixology" class="py-24 bg-neutral-950">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-4 italic">
+        {{ 'pages.home.location.title' | transloco }}
+      </h2>
+      <p class="text-gray-400 text-lg mb-6">
+        {{ 'pages.home.location.subtitle' | transloco }}
+      </p>
+      <div class="w-24 h-1 bg-gold-500 mx-auto"></div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <!-- Info Column -->
+      <div
+        class="bg-gradient-to-br from-neutral-900 to-black p-8 rounded-lg border border-gold-500/20"
+      >
+        <div class="space-y-8">
+          @for (info of locationInfo; track info.key) {
+            <div class="flex items-start gap-4 group">
+              <span
+                class="text-4xl text-gold-400 mt-1 group-hover:scale-110 transition-transform"
+                >{{ info.icon }}</span
+              >
+              <div class="flex-1">
+                <h3 class="text-gold-400 font-bold mb-2 uppercase text-sm tracking-wide">
+                  {{ 'pages.home.location.labels.' + info.key | transloco }}
+                </h3>
+                <p class="text-white text-lg">
+                  {{ 'pages.home.location.' + info.key | transloco }}
+                </p>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div
+        class="bg-gradient-to-br from-neutral-900 to-black rounded-lg border border-gold-500/20 overflow-hidden aspect-square lg:aspect-auto"
+      >
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.6074220827577!2d-3.787403823474757!3d37.77580231209978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6dd7bd5d0992af%3A0x5afcf94d9a405740!2sTHE%20GOAT%20LOUNGE!5e0!3m2!1ses!2ses!4v1772897925516!5m2!1ses!2ses"
+          class="w-full h-full min-h-96"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        >
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contacto" class="py-24 bg-gradient-to-b from-neutral-950 to-black">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-6 italic">
+      {{ 'shared.nav.contacto' | transloco }}
+    </h2>
+    <p class="text-gray-400 text-lg mb-12 max-w-2xl mx-auto">
+      {{ 'pages.home.footer.about.tagline' | transloco }}
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a
+        routerLink="/contacto"
+        class="inline-block px-8 py-4 bg-gold-500 hover:bg-gold-600 text-black font-bold text-base tracking-wide uppercase rounded-md transition-all hover:scale-105 shadow-2xl shadow-gold-500/40"
+      >
+        {{ 'shared.actions.getInTouch' | transloco }}
+      </a>
+    </div>
+  </div>
+</section>

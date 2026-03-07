@@ -1,0 +1,26 @@
+<!-- Header Navigation -->
+<app-header
+  [isScrolled]="isScrolled()"
+  [currentLang]="currentLang()"
+  [mobileMenuOpen]="mobileMenuOpen()"
+  [navItems]="navItems"
+  (scrollToSection)="scrollToSection($event)"
+  (navigateToRoute)="navigateToRoute($event)"
+  (changeLang)="changeLang($event)"
+  (toggleMobileMenu)="toggleMobileMenu()"
+/>
+
+<!-- Hero Section -->
+<app-hero-section (scrollToSection)="scrollToSection($event)" />
+
+<!-- Essence/Features Section -->
+<app-essence-section />
+
+<!-- Shisha/Gallery Section -->
+<app-shisha-section />
+
+<!-- Location/Contact Sections -->
+<app-location-section (navigateToRoute)="navigateToRoute($event)" />
+
+<!-- Footer -->
+<app-footer (scrollToSection)="scrollToSection($event)" />

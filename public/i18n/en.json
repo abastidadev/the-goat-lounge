@@ -1,0 +1,174 @@
+{
+  "shared": {
+    "nav": {
+      "shisha": "Experience",
+      "carta": "Menu",
+      "contacto": "Contact"
+    },
+    "actions": {
+      "learnMore": "Learn more",
+      "viewMenu": "View menu",
+      "getInTouch": "Get in touch"
+    }
+  },
+  "general": {
+    "applicationName": "THE GOAT LOUNGE",
+    "tagline": "Cocktails, Shisha & Music",
+    "languages": {
+      "es": "Spanish",
+      "en": "English"
+    }
+  },
+  "pages": {
+    "home": {
+      "nav": {
+        "essence": "Essence",
+        "shisha": "Shisha",
+        "mixology": "Mixology",
+        "contact": "Contact"
+      },
+      "hero": {
+        "eyebrow": "EXCLUSIVITY REDEFINED",
+        "title": "THE GOAT LOUNGE",
+        "subtitle": "Crafting Unforgettable Nights with Premium Cocktails, Shisha & Music.",
+        "cta": "Reserve Your Experience",
+        "ctaSecondary": "Explore Menu",
+        "scrollDown": "Discover More"
+      },
+      "features": {
+        "title": "What We Offer",
+        "cocktails": {
+          "title": "Great Cocktails",
+          "description": "Expertly crafted cocktails that will delight your senses"
+        },
+        "dancing": {
+          "title": "Perfect for Dancing",
+          "description": "The best atmosphere to dance and enjoy the night"
+        },
+        "shisha": {
+          "title": "Premium Shishas",
+          "description": "A wide variety of shishas with unique flavors"
+        }
+      },
+      "atmosphere": {
+        "title": "Our Space",
+        "subtitle": "Where every corner tells a story",
+        "exterior": "Exterior",
+        "interior": "Interior",
+        "bar": "Bar Area"
+      },
+      "location": {
+        "title": "Where to Find Us",
+        "subtitle": "Visit us in Jaén",
+        "address": "C. la Luna, 9, A, 23008 Jaén",
+        "hours": "Tue-Sun 16:00-2:00 | Mon: Closed",
+        "phone": "684 21 88 34",
+        "email": "info@thegoatlounge.com",
+        "labels": {
+          "address": "Address",
+          "hours": "Hours",
+          "phone": "Phone",
+          "email": "Email"
+        }
+      },
+      "footer": {
+        "about": {
+          "title": "The Goat Lounge",
+          "tagline": "Your go-to place for cocktails, shisha, and great vibes in the heart of Jaén"
+        },
+        "contact": {
+          "title": "Contact",
+          "phone": "Phone",
+          "email": "Email",
+          "address": "Address"
+        },
+        "links": {
+          "title": "Quick Links",
+          "shisha": "Experience",
+          "carta": "Menu",
+          "contacto": "Contact"
+        },
+        "copyright": "© 2026 The Goat Lounge. All rights reserved."
+      }
+    },
+    "menu": {
+      "title": "Our Menu",
+      "placeholder": "Menu page - Under development",
+      "sections": {
+        "shisha": "Shisha",
+        "cocktails": "Cocktails",
+        "drinks": "Drinks"
+      }
+    },
+    "contact": {
+      "title": "Contact Us",
+      "subtitle": "We're here for you",
+      "heroDescription": "Have a question, want to make a reservation, or organize a private event? We'd love to hear from you.",
+      "quickResponse": "Quick Response",
+      "quickResponseDesc": "We reply within 24 hours",
+      "visitUs": "Visit Us",
+      "visitUsDesc": "Heart of Jaén, easy access",
+      "secure": "100% Secure",
+      "multiLanguage": "Multi-language",
+      "multiLanguageDesc": "English, Spanish & more",
+      "info": {
+        "title": "Get in Touch",
+        "address": "C. la Luna, 9, A, 23008 Jaén",
+        "hours": "Tue-Sun 16:00-2:00 | Mon: Closed",
+        "phone": "684 21 88 34",
+        "email": "info@thegoatlounge.com",
+        "instagram": "@thegoatlounge"
+      },
+      "labels": {
+        "address": "Address",
+        "hours": "Opening Hours",
+        "phone": "Phone",
+        "email": "Email",
+        "instagram": "Instagram"
+      },
+      "form": {
+        "title": "Send us a message",
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone (optional)",
+        "subject": "Subject",
+        "message": "Message",
+        "messagePlaceholder": "Tell us how we can help you...",
+        "submit": "Send Message",
+        "submitting": "Sending...",
+        "success": "Message sent successfully! We'll get back to you soon.",
+        "subjects": {
+          "general": "General Inquiry",
+          "reservation": "Reservation",
+          "event": "Private Event",
+          "other": "Other"
+        },
+        "errors": {
+          "required": "This field is required",
+          "minLength": "Minimum 2 characters required",
+          "minLengthMessage": "Minimum 10 characters required",
+          "invalidEmail": "Please enter a valid email"
+        }
+      },
+      "map": {
+        "title": "Find Us",
+        "subtitle": "Visit us in the heart of Jaén"
+      },
+      "actions": {
+        "googleMaps": "Google Maps",
+        "waze": "Waze"
+      },
+      "additional": {
+        "parking": "Parking",
+        "parkingInfo": "La Victoria (4-6 min walk)",
+        "bus": "Bus Stop",
+        "busInfo": "Av. Madrid (3 min) - 11 lines"
+      }
+    },
+    "notFound": {
+      "title": "Page not found",
+      "message": "Sorry, the page you're looking for doesn't exist.",
+      "action": "Back to home"
+    }
+  }
+}

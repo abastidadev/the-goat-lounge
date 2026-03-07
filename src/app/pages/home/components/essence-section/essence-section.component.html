@@ -1,0 +1,28 @@
+<section id="essence" class="py-24 bg-neutral-950">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-6 italic">
+        {{ 'pages.home.features.title' | transloco }}
+      </h2>
+      <div class="w-24 h-1 bg-gold-500 mx-auto"></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      @for (feature of features; track feature.key) {
+        <div
+          class="bg-gradient-to-br from-neutral-900 to-black p-8 rounded-lg border border-gold-500/20 hover:border-gold-500/60 transition-all hover:shadow-2xl hover:shadow-gold-500/10 hover:-translate-y-2 group"
+        >
+          <div class="text-6xl mb-6 group-hover:scale-110 transition-transform">
+            {{ feature.icon }}
+          </div>
+          <h3 class="text-2xl font-serif font-bold text-white mb-4 italic">
+            {{ 'pages.home.features.' + feature.key + '.title' | transloco }}
+          </h3>
+          <p class="text-gray-400 leading-relaxed">
+            {{ 'pages.home.features.' + feature.key + '.description' | transloco }}
+          </p>
+        </div>
+      }
+    </div>
+  </div>
+</section>

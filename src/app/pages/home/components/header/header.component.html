@@ -1,0 +1,95 @@
+<header [class]="headerClasses()">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
+    <!-- Logo -->
+    <a href="#home" class="flex items-center gap-3 group">
+      <img
+        src="/assets/images/logo.webp"
+        alt="The Goat Lounge Logo"
+        class="w-12 h-12 object-contain group-hover:scale-110 transition-transform"
+      />
+      <span class="text-xl font-serif font-bold text-white tracking-wide italic">
+        {{ 'general.applicationName' | transloco }}
+      </span>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden lg:flex items-center gap-8">
+      @for (item of navItems(); track item.key) {
+        @if (item.type === 'scroll') {
+          <button
+            (click)="scrollToSection.emit(item.key)"
+            class="text-sm font-medium text-gray-300 hover:text-gold-400 transition-colors tracking-wide uppercase"
+          >
+            {{ 'shared.nav.' + item.key | transloco }}
+          </button>
+        } @else {
+          <a
+            [routerLink]="'/' + item.key"
+            class="text-sm font-medium text-gray-300 hover:text-gold-400 transition-colors tracking-wide uppercase"
+          >
+            {{ 'shared.nav.' + item.key | transloco }}
+          </a>
+        }
+      }
+    </nav>
+
+    <!-- Language Switcher -->
+    <div class="hidden lg:flex items-center gap-4">
+      <div class="flex gap-1 bg-black/30 p-1 rounded-md">
+        <button (click)="changeLang.emit('en')" [class]="langButtonClasses('en')">EN</button>
+        <button (click)="changeLang.emit('es')" [class]="langButtonClasses('es')">ES</button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    <button
+      (click)="toggleMobileMenu.emit()"
+      class="lg:hidden text-white p-2"
+      aria-label="Toggle menu"
+    >
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        @if (!mobileMenuOpen()) {
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        } @else {
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        }
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  @if (mobileMenuOpen()) {
+    <nav class="lg:hidden bg-black/95 backdrop-blur-lg border-t border-gold-500/20">
+      <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-2">
+        @for (item of navItems(); track item.key) {
+          @if (item.type === 'scroll') {
+            <button
+              (click)="handleMobileNavClick(item)"
+              class="px-4 py-2 text-left text-gray-300 hover:text-gold-400 hover:bg-gold-500/10 rounded-md transition-colors uppercase text-sm font-medium"
+            >
+              {{ 'shared.nav.' + item.key | transloco }}
+            </button>
+          } @else {
+            <a
+              [routerLink]="'/' + item.key"
+              (click)="toggleMobileMenu.emit()"
+              class="px-4 py-2 text-left text-gray-300 hover:text-gold-400 hover:bg-gold-500/10 rounded-md transition-colors uppercase text-sm font-medium"
+            >
+              {{ 'shared.nav.' + item.key | transloco }}
+            </a>
+          }
+        }
+      </div>
+    </nav>
+  }
+</header>
