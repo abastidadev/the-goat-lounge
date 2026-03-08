@@ -7,15 +7,10 @@ import {
   HostListener,
 } from '@angular/core';
 import { TranslocoPipe, TranslocoService } from '@jsverse/transloco';
-import { Router } from '@angular/router';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { HeaderComponent } from '../home/components/header/header.component';
-import { FooterComponent } from '../home/components/footer/footer.component';
-
-interface NavItem {
-  key: string;
-  type: 'scroll' | 'route';
-}
+import { HeaderComponent } from '../../shared/components/header/header.component';
+import { FooterComponent } from '../../shared/components/footer/footer.component';
+import { type NavItem } from '../../shared/services/navigation.service';
 
 @Component({
   selector: 'app-contact',
@@ -27,7 +22,6 @@ interface NavItem {
 export class ContactComponent {
   private fb = inject(FormBuilder);
   private readonly transloco = inject(TranslocoService);
-  private readonly router = inject(Router);
 
   // Signals for Header
   protected readonly currentLang = signal<string>(this.transloco.getActiveLang());
@@ -89,32 +83,6 @@ export class ContactComponent {
 
   protected toggleMobileMenu(): void {
     this.mobileMenuOpen.update((v) => !v);
-  }
-
-  protected scrollToSection(section: string): void {
-    this.router.navigate(['/']);
-    setTimeout(() => {
-      const element = document.getElementById(section);
-      if (element) {
-        const offset = 80;
-        const elementPosition = element.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.scrollY - offset;
-
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth',
-        });
-      }
-    }, 100);
-    this.mobileMenuOpen.set(false);
-  }
-
-  protected navigateToRoute(route: string): void {
-    if (route === 'contacto') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else {
-      this.router.navigate(['/' + route]);
-    }
   }
 
   protected async onSubmit(): Promise<void> {

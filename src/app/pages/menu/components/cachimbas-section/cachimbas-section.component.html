@@ -1,0 +1,149 @@
+<!-- Cachimbas Section -->
+<div class="space-y-8">
+  <!-- Section Subtitle -->
+  <div class="text-center">
+    <p class="text-gray-400 text-lg">
+      {{ 'pages.menu.cachimbas.subtitle' | transloco }}
+    </p>
+  </div>
+
+  <!-- Filter Bar -->
+  <div class="flex justify-between gap-4 overflow-x-auto scrollbar-hide pb-2">
+    <!-- Origin Filter -->
+    <div class="flex items-center gap-2 flex-shrink-0">
+      <span class="text-xs font-semibold text-gold-400 uppercase tracking-wide">{{ 'pages.menu.filters.origin' | transloco }}:</span>
+      <div class="flex gap-1">
+        @for (filter of originFilters; track filter.id) {
+          <button
+            (click)="selectedOrigin.set(filter.value)"
+            [class]="
+              selectedOrigin() === filter.value
+                ? 'px-2 py-1 rounded-md bg-gold-500/20 border border-gold-500 text-gold-300 text-xs font-medium whitespace-nowrap transition-all'
+                : 'px-2 py-1 rounded-md bg-neutral-900 border border-neutral-700 text-gray-400 hover:text-gray-300 hover:border-gold-500/30 text-xs font-medium whitespace-nowrap transition-all'
+            "
+          >
+            {{ filter.labelKey | transloco }}
+          </button>
+        }
+      </div>
+    </div>
+
+    <!-- Draw Type Filter -->
+    <div class="flex items-center gap-2 flex-shrink-0">
+      <span class="text-xs font-semibold text-gold-400 uppercase tracking-wide">{{ 'pages.menu.filters.drawType' | transloco }}:</span>
+      <div class="flex gap-1">
+        @for (filter of drawTypeFilters; track filter.id) {
+          <button
+            (click)="selectedDrawType.set(filter.value)"
+            [class]="
+              selectedDrawType() === filter.value
+                ? 'px-2 py-1 rounded-md bg-gold-500/20 border border-gold-500 text-gold-300 text-xs font-medium whitespace-nowrap transition-all'
+                : 'px-2 py-1 rounded-md bg-neutral-900 border border-neutral-700 text-gray-400 hover:text-gray-300 hover:border-gold-500/30 text-xs font-medium whitespace-nowrap transition-all'
+            "
+          >
+            {{ filter.labelKey | transloco }}
+          </button>
+        }
+      </div>
+    </div>
+
+    <!-- Intensity Filter -->
+    <div class="flex items-center gap-2 flex-shrink-0">
+      <span class="text-xs font-semibold text-gold-400 uppercase tracking-wide">{{ 'pages.menu.filters.intensity' | transloco }}:</span>
+      <div class="flex gap-1">
+        @for (filter of intensityFilters; track filter.id) {
+          <button
+            (click)="selectedIntensity.set(filter.value)"
+            [class]="
+              selectedIntensity() === filter.value
+                ? 'px-2 py-1 rounded-md bg-gold-500/20 border border-gold-500 text-gold-300 text-xs font-medium whitespace-nowrap transition-all'
+                : 'px-2 py-1 rounded-md bg-neutral-900 border border-neutral-700 text-gray-400 hover:text-gray-300 hover:border-gold-500/30 text-xs font-medium whitespace-nowrap transition-all'
+            "
+          >
+            {{ filter.labelKey | transloco }}
+          </button>
+        }
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Grid -->
+  @if (filteredCachimbas().length > 0) {
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+      @for (item of filteredCachimbas(); track item.id) {
+        <div
+          class="relative group bg-gradient-to-br from-neutral-900 to-black rounded-md border-2 border-gold-500 shadow-2xl shadow-gold-500/50 hover:shadow-gold-500/80 hover:scale-105 transition-all duration-300 overflow-hidden h-full flex flex-col"
+        >
+          <!-- Badge -->
+          @if (item.badge) {
+            <div [class]="badgeClasses()(item.badge)">
+              {{ 'pages.menu.badges.' + item.badge | transloco }}
+            </div>
+          }
+
+          <!-- Image -->
+          <div class="relative aspect-square bg-white flex items-center justify-center overflow-hidden p-4">
+            @if (item.image) {
+              <img
+                [src]="item.image.startsWith('http') ? item.image : '/assets/images/menu/cachimbas/' + item.image"
+                [alt]="item.nameKey | transloco"
+                class="w-full h-full object-contain"
+              />
+            } @else {
+              <div class="text-6xl opacity-30">💨</div>
+            }
+          </div>
+
+          <!-- Content -->
+          <div class="p-4 flex flex-col flex-1">
+            <!-- Info Section (grows to fill space) -->
+            <div class="flex-1 space-y-2">
+              <!-- Name -->
+              <h3 class="text-xl font-bold text-white uppercase tracking-wide">
+                {{ item.nameKey | transloco }}
+              </h3>
+
+              <!-- Details -->
+              <div class="flex items-center gap-2 text-sm text-gray-400">
+                @if (item.origin) {
+                  <span>{{ item.origin }}</span>
+                }
+                @if (item.drawType) {
+                  <span>•</span>
+                  <span>{{ 'pages.menu.filters.drawTypes.' + item.drawType | transloco }}</span>
+                }
+              </div>
+
+              <!-- Description -->
+              @if (item.descriptionKey) {
+                <p class="text-sm text-gray-300 line-clamp-2">
+                  {{ item.descriptionKey | transloco }}
+                </p>
+              }
+            </div>
+
+            <!-- Price (always at bottom) -->
+            <div class="flex items-center justify-between pt-4 mt-4 border-t border-gold-500/20">
+              <span class="text-2xl font-bold text-gold-400">
+                {{ formatPrice(item.price) }}
+              </span>
+              <button
+                class="px-3 py-1 rounded-md bg-gold-500/10 border border-gold-500 text-gold-400 hover:bg-gold-500 hover:text-black text-sm font-semibold transition-all"
+              >
+                {{ 'pages.menu.actions.details' | transloco }}
+              </button>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  } @else {
+    <!-- Empty State -->
+    <div class="text-center py-12">
+      <div class="text-6xl mb-4 opacity-30">💨</div>
+      <p class="text-gray-400 text-lg">
+        {{ 'pages.menu.emptyState' | transloco }}
+      </p>
+    </div>
+  }
+</div>

@@ -1,0 +1,66 @@
+<!-- Comida Section -->
+<div class="space-y-8">
+  <!-- Section Subtitle -->
+  <div class="text-center">
+    <p class="text-gray-400 text-lg">
+      {{ 'pages.menu.comida.subtitle' | transloco }}
+    </p>
+  </div>
+
+  <!-- Food Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    @for (item of comida(); track item.id) {
+      <div class="bg-neutral-900 rounded-md border border-gold-500/20 hover:border-gold-500/50 transition-colors overflow-hidden">
+        @if (item.image) {
+          <div class="relative aspect-video bg-neutral-800">
+            <img
+              [src]="item.image.startsWith('http') ? item.image : '/assets/images/menu/comida/' + item.image"
+              [alt]="item.nameKey | transloco"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        }
+        <div class="p-6">
+          <div class="flex gap-4">
+            <div class="flex-1">
+              <!-- Name & Dietary Icons -->
+              <div class="flex items-center gap-2 mb-2">
+                <h3 class="text-lg font-bold text-white">
+                  {{ item.nameKey | transloco }}
+                </h3>
+                @if (item.dietary && item.dietary.length > 0) {
+                  <span class="text-sm">{{ getDietaryIcons(item.dietary) }}</span>
+                }
+              </div>
+
+              <!-- Description -->
+              @if (item.descriptionKey) {
+                <p class="text-sm text-gray-400 mb-2">
+                  {{ item.descriptionKey | transloco }}
+                </p>
+              }
+
+              <!-- Dietary Labels -->
+              @if (item.dietary && item.dietary.length > 0) {
+                <div class="flex gap-1 flex-wrap mt-2">
+                  @for (diet of item.dietary; track diet) {
+                    <span class="text-xs px-2 py-0.5 rounded-md bg-green-500/20 text-green-400 border border-green-500/30">
+                      {{ 'pages.menu.comida.dietary.' + diet | transloco }}
+                    </span>
+                  }
+                </div>
+              }
+            </div>
+
+            <!-- Price -->
+            <div class="flex items-start">
+              <span class="text-xl font-bold text-gold-400">
+                {{ formatPrice(item.price) }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>

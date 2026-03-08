@@ -1,0 +1,103 @@
+<!-- Bebidas Section -->
+<div class="space-y-8">
+  <!-- Section Subtitle -->
+  <div class="text-center">
+    <p class="text-gray-400 text-lg">
+      {{ 'pages.menu.bebidas.subtitle' | transloco }}
+    </p>
+  </div>
+
+  <!-- Grouped by Type -->
+  <div class="space-y-8">
+    <!-- Cervezas -->
+    @if (cervezas().length > 0) {
+      <div>
+        <h3 class="text-2xl font-serif font-bold text-gold-400 mb-4">
+          {{ 'pages.menu.bebidas.types.cerveza' | transloco }}
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          @for (item of cervezas(); track item.id) {
+            <div class="flex justify-between items-center bg-neutral-900 rounded-md border border-gold-500/20 p-4 hover:border-gold-500/50 transition-colors">
+              <div>
+                <h4 class="text-white font-semibold">{{ item.nameKey | transloco }}</h4>
+                @if (item.size) {
+                  <p class="text-sm text-gray-400">{{ item.size }}</p>
+                }
+                @if (item.descriptionKey) {
+                  <p class="text-sm text-gray-400">{{ item.descriptionKey | transloco }}</p>
+                }
+              </div>
+              <span class="text-gold-400 font-bold text-lg">{{ formatPrice(item.price) }}</span>
+            </div>
+          }
+        </div>
+      </div>
+    }
+
+    <!-- Refrescos -->
+    @if (refrescos().length > 0) {
+      <div>
+        <h3 class="text-2xl font-serif font-bold text-gold-400 mb-4">
+          {{ 'pages.menu.bebidas.types.refresco' | transloco }}
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          @for (item of refrescos(); track item.id) {
+            <div class="flex justify-between items-center bg-neutral-900 rounded-md border border-gold-500/20 p-4 hover:border-gold-500/50 transition-colors">
+              <div>
+                <h4 class="text-white font-semibold">{{ item.nameKey | transloco }}</h4>
+                @if (item.size) {
+                  <p class="text-sm text-gray-400">{{ item.size }}</p>
+                }
+              </div>
+              <span class="text-gold-400 font-bold text-lg">{{ formatPrice(item.price) }}</span>
+            </div>
+          }
+        </div>
+      </div>
+    }
+
+    <!-- Tés -->
+    @if (tes().length > 0) {
+      <div>
+        <h3 class="text-2xl font-serif font-bold text-gold-400 mb-4">
+          {{ 'pages.menu.bebidas.types.te' | transloco }}
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          @for (item of tes(); track item.id) {
+            <div class="flex justify-between items-center bg-neutral-900 rounded-md border border-gold-500/20 p-4 hover:border-gold-500/50 transition-colors">
+              <div>
+                <h4 class="text-white font-semibold">{{ item.nameKey | transloco }}</h4>
+                @if (item.descriptionKey) {
+                  <p class="text-sm text-gray-400">{{ item.descriptionKey | transloco }}</p>
+                }
+              </div>
+              <span class="text-gold-400 font-bold text-lg">{{ formatPrice(item.price) }}</span>
+            </div>
+          }
+        </div>
+      </div>
+    }
+
+    <!-- Agua -->
+    @if (agua().length > 0) {
+      <div>
+        <h3 class="text-2xl font-serif font-bold text-gold-400 mb-4">
+          {{ 'pages.menu.bebidas.types.agua' | transloco }}
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          @for (item of agua(); track item.id) {
+            <div class="flex justify-between items-center bg-neutral-900 rounded-md border border-gold-500/20 p-4 hover:border-gold-500/50 transition-colors">
+              <div>
+                <h4 class="text-white font-semibold">{{ item.nameKey | transloco }}</h4>
+                @if (item.size) {
+                  <p class="text-sm text-gray-400">{{ item.size }}</p>
+                }
+              </div>
+              <span class="text-gold-400 font-bold text-lg">{{ formatPrice(item.price) }}</span>
+            </div>
+          }
+        </div>
+      </div>
+    }
+  </div>
+</div>

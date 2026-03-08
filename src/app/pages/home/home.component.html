@@ -4,14 +4,12 @@
   [currentLang]="currentLang()"
   [mobileMenuOpen]="mobileMenuOpen()"
   [navItems]="navItems"
-  (scrollToSection)="scrollToSection($event)"
-  (navigateToRoute)="navigateToRoute($event)"
   (changeLang)="changeLang($event)"
   (toggleMobileMenu)="toggleMobileMenu()"
 />
 
 <!-- Hero Section -->
-<app-hero-section (scrollToSection)="scrollToSection($event)" />
+<app-hero-section />
 
 <!-- Essence/Features Section -->
 <app-essence-section />
@@ -20,7 +18,7 @@
 <app-shisha-section />
 
 <!-- Location/Contact Sections -->
-<app-location-section (navigateToRoute)="navigateToRoute($event)" />
+<app-location-section />
 
 <!-- Footer -->
-<app-footer (scrollToSection)="scrollToSection($event)" />
+<app-footer />

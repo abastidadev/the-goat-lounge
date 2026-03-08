@@ -1,0 +1,42 @@
+<!-- Shared Header -->
+<app-header
+  [isScrolled]="isScrolled()"
+  [currentLang]="currentLang()"
+  [mobileMenuOpen]="mobileMenuOpen()"
+  [navItems]="navItems"
+  (changeLang)="changeLang($event)"
+  (toggleMobileMenu)="toggleMobileMenu()"
+/>
+
+<!-- Menu Container -->
+<main class="min-h-screen bg-black pt-20">
+  <!-- Fixed Title + Tabs Section -->
+  <app-menu-header
+    [activeTab]="activeTab()"
+    (tabChange)="setActiveTab($event)"
+  />
+
+  <!-- Dynamic Content Section -->
+  <div class="max-w-7xl mx-auto px-4 py-12">
+    @switch (activeTab()) {
+      @case (MenuTab.Cachimbas) {
+        <app-cachimbas-section />
+      }
+      @case (MenuTab.Sabores) {
+        <app-sabores-section />
+      }
+      @case (MenuTab.Bebidas) {
+        <app-bebidas-section />
+      }
+      @case (MenuTab.Cocteles) {
+        <app-cocteles-section />
+      }
+      @case (MenuTab.Comida) {
+        <app-comida-section />
+      }
+    }
+  </div>
+</main>
+
+<!-- Shared Footer -->
+<app-footer />

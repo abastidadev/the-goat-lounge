@@ -7,18 +7,13 @@ import {
   HostListener,
 } from '@angular/core';
 import { TranslocoService } from '@jsverse/transloco';
-import { Router } from '@angular/router';
-import { HeaderComponent } from './components/header/header.component';
+import { HeaderComponent } from '../../shared/components/header/header.component';
+import { FooterComponent } from '../../shared/components/footer/footer.component';
 import { HeroSectionComponent } from './components/hero-section/hero-section.component';
 import { EssenceSectionComponent } from './components/essence-section/essence-section.component';
 import { ShishaSectionComponent } from './components/shisha-section/shisha-section.component';
 import { LocationSectionComponent } from './components/location-section/location-section.component';
-import { FooterComponent } from './components/footer/footer.component';
-
-interface NavItem {
-  key: string;
-  type: 'scroll' | 'route';
-}
+import { type NavItem } from '../../shared/services/navigation.service';
 
 @Component({
   selector: 'app-home',
@@ -36,7 +31,6 @@ interface NavItem {
 })
 export class HomeComponent {
   private readonly transloco = inject(TranslocoService);
-  private readonly router = inject(Router);
 
   // Signals
   protected readonly currentLang = signal<string>(this.transloco.getActiveLang());
@@ -48,7 +42,7 @@ export class HomeComponent {
 
   // Data
   protected readonly navItems: NavItem[] = [
-    { key: 'shisha', type: 'scroll' },
+    { key: 'shisha', type: 'route' },
     { key: 'carta', type: 'route' },
     { key: 'contacto', type: 'route' },
   ];
@@ -65,24 +59,5 @@ export class HomeComponent {
 
   protected toggleMobileMenu(): void {
     this.mobileMenuOpen.update((v) => !v);
-  }
-
-  protected scrollToSection(section: string): void {
-    const element = document.getElementById(section);
-    if (element) {
-      const offset = 80; // Header height
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.scrollY - offset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth',
-      });
-    }
-    this.mobileMenuOpen.set(false);
-  }
-
-  protected navigateToRoute(route: string): void {
-    this.router.navigate(['/' + route]);
   }
 }

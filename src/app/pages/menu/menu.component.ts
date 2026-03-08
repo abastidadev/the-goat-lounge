@@ -1,34 +1,78 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { TranslocoPipe } from '@jsverse/transloco';
-import { RouterLink } from '@angular/router';
+import {
+  Component,
+  ChangeDetectionStrategy,
+  inject,
+  signal,
+  computed,
+  HostListener,
+} from '@angular/core';
+import { TranslocoService } from '@jsverse/transloco';
+import { HeaderComponent } from '../../shared/components/header/header.component';
+import { FooterComponent } from '../../shared/components/footer/footer.component';
+import { MenuHeaderComponent } from './components/menu-header/menu-header.component';
+import { MenuTab } from './domain/menu-tab.model';
+import { CachimbasSectionComponent } from './components/cachimbas-section/cachimbas-section.component';
+import { SaboresSectionComponent } from './components/sabores-section/sabores-section.component';
+import { BebidasSectionComponent } from './components/bebidas-section/bebidas-section.component';
+import { CoctelesSectionComponent } from './components/cocteles-section/cocteles-section.component';
+import { ComidaSectionComponent } from './components/comida-section/comida-section.component';
+import { type NavItem } from '../../shared/services/navigation.service';
 
 @Component({
   selector: 'app-menu',
   standalone: true,
-  imports: [TranslocoPipe, RouterLink],
-  template: `
-    <div class="min-h-screen flex flex-col items-center justify-center gap-2 p-2">
-      <div class="text-center max-w-2xl mx-auto">
-        <h1 class="text-4xl font-bold mb-2">
-          {{ 'pages.menu.title' | transloco }}
-        </h1>
-        <div class="p-2 bg-gray-100 dark:bg-gray-800 rounded-md">
-          <p class="text-lg text-gray-600 dark:text-gray-300">
-            {{ 'pages.menu.placeholder' | transloco }}
-          </p>
-        </div>
-
-        <div class="mt-2">
-          <a
-            routerLink="/"
-            class="text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 transition-colors"
-          >
-            ← {{ 'shared.nav.home' | transloco }}
-          </a>
-        </div>
-      </div>
-    </div>
-  `,
+  imports: [
+    HeaderComponent,
+    FooterComponent,
+    MenuHeaderComponent,
+    CachimbasSectionComponent,
+    SaboresSectionComponent,
+    BebidasSectionComponent,
+    CoctelesSectionComponent,
+    ComidaSectionComponent,
+  ],
+  templateUrl: './menu.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MenuComponent {}
+export class MenuComponent {
+  private readonly transloco = inject(TranslocoService);
+
+  // Expose enum for template
+  protected readonly MenuTab = MenuTab;
+
+  // State
+  protected readonly activeTab = signal<MenuTab>(MenuTab.Cachimbas);
+  protected readonly currentLang = signal(this.transloco.getActiveLang());
+  protected readonly scrollY = signal(0);
+  protected readonly mobileMenuOpen = signal(false);
+
+  // Computed
+  protected readonly isScrolled = computed(() => this.scrollY() > 50);
+
+  // Data
+  protected readonly navItems: NavItem[] = [
+    { key: 'shisha', type: 'route' },
+    { key: 'carta', type: 'route' },
+    { key: 'contacto', type: 'route' },
+  ];
+
+  @HostListener('window:scroll')
+  protected onScroll(): void {
+    this.scrollY.set(window.scrollY);
+  }
+
+  // Methods
+  protected setActiveTab(tab: MenuTab): void {
+    this.activeTab.set(tab);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  protected changeLang(lang: string): void {
+    this.transloco.setActiveLang(lang);
+    this.currentLang.set(lang);
+  }
+
+  protected toggleMobileMenu(): void {
+    this.mobileMenuOpen.update((v) => !v);
+  }
+}

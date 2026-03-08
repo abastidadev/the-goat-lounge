@@ -1,7 +1,7 @@
 {
   "shared": {
     "nav": {
-      "shisha": "Experiencia",
+      "shisha": "Inicio",
       "carta": "Carta",
       "contacto": "Contacto"
     },
@@ -84,7 +84,7 @@
         },
         "links": {
           "title": "Enlaces rápidos",
-          "shisha": "Experiencia",
+          "shisha": "Inicio",
           "carta": "Carta",
           "contacto": "Contacto"
         },
@@ -93,7 +93,326 @@
     },
     "menu": {
       "title": "Nuestro Menú",
+      "subtitle": "Descubre nuestra selección premium",
       "placeholder": "Página de menú - En desarrollo",
+      "hero": {
+        "title": "Nuestra Carta",
+        "subtitle": "Descubre nuestra selección premium"
+      },
+      "tabs": {
+        "cachimbas": "Cachimbas",
+        "sabores": "Sabores",
+        "bebidas": "Bebidas",
+        "cocteles": "Cocteles",
+        "comida": "Comida"
+      },
+      "categories": {
+        "cachimbas": "Cachimbas",
+        "sabores": "Sabores",
+        "bebidas": "Bebidas",
+        "cocteles": "Cócteles",
+        "comida": "Comida"
+      },
+      "cachimbas": {
+        "subtitle": "Colección premium de cachimbas para una experiencia inolvidable",
+        "items": {
+          "aeonEdition": {
+            "name": "Aeon Edition 4",
+            "description": "Ingeniería alemana en su máxima expresión - acero inoxidable con tiro impecable"
+          },
+          "khalilMamoon": {
+            "name": "Khalil Mamoon Clásica",
+            "description": "Artesanía egipcia tradicional con carácter auténtico"
+          },
+          "steamulation": {
+            "name": "Steamulation Pro X III",
+            "description": "Cachimba alemana de primera con sistema de flujo de aire revolucionario"
+          },
+          "moze": {
+            "name": "Moze Breeze Two",
+            "description": "Diseño alemán moderno con calidad de humo excepcional"
+          },
+          "oblako": {
+            "name": "Oblako M Undead",
+            "description": "Innovación rusa con estética única y tiro suave"
+          },
+          "maklaud": {
+            "name": "Maklaud Space Jam",
+            "description": "Cachimba rusa con excelente relación calidad-precio"
+          },
+          "wookah": {
+            "name": "Wookah Nogal",
+            "description": "Cachimba artesanal española hecha a mano con madera natural"
+          },
+          "japona": {
+            "name": "Japona Hookah Limited",
+            "description": "Diseño español con estilo mediterráneo y tiro suave"
+          },
+          "классический": {
+            "name": "Clásica Rusa",
+            "description": "Cachimba rusa tradicional con sabor auténtico"
+          }
+        }
+      },
+      "sabores": {
+        "subtitle": "Explora nuestra diversa selección de tabacos premium",
+        "items": {
+          "doubleMint": {
+            "name": "Menta Doble",
+            "description": "Sensación refrescante de menta intensa"
+          },
+          "watermelon": {
+            "name": "Sandía",
+            "description": "Dulce y jugosa, sabor a verano"
+          },
+          "spicedApple": {
+            "name": "Manzana Especiada",
+            "description": "Manzana cálida con notas de canela"
+          },
+          "tropicalMix": {
+            "name": "Mix Tropical",
+            "description": "Mezcla de frutas exóticas"
+          },
+          "blueberryMint": {
+            "name": "Arándanos con Menta",
+            "description": "Dulzura de bayas con menta fresca"
+          },
+          "lemonPie": {
+            "name": "Tarta de Limón",
+            "description": "Sabor cremoso a postre de limón"
+          },
+          "passionFruit": {
+            "name": "Fruta de la Pasión",
+            "description": "Toque tropical exótico"
+          },
+          "cola": {
+            "name": "Cola",
+            "description": "Sabor clásico a cola"
+          },
+          "peachIceTea": {
+            "name": "Té Helado de Melocotón",
+            "description": "Refrescante mezcla de té y melocotón"
+          },
+          "cinnamonGum": {
+            "name": "Chicle de Canela",
+            "description": "Toque picante de canela"
+          },
+          "grapeLemon": {
+            "name": "Uva Limón",
+            "description": "Uva dulce con toque cítrico"
+          },
+          "vanillaCream": {
+            "name": "Crema de Vainilla",
+            "description": "Postre suave de vainilla"
+          },
+          "mintChocolate": {
+            "name": "Menta Chocolate",
+            "description": "Menta fresca con chocolate intenso"
+          },
+          "raspberry": {
+            "name": "Frambuesa",
+            "description": "Sabor ácido y dulce a baya"
+          },
+          "caramel": {
+            "name": "Caramelo",
+            "description": "Caramelo rico y mantecoso"
+          }
+        }
+      },
+      "bebidas": {
+        "subtitle": "Refréscate con nuestra selección de bebidas",
+        "types": {
+          "cerveza": "Cervezas",
+          "refresco": "Refrescos",
+          "te": "Tés e Infusiones",
+          "agua": "Agua"
+        },
+        "items": {
+          "alhambraReserva": {
+            "name": "Alhambra Reserva",
+            "description": "Cerveza artesanal premium de Granada"
+          },
+          "estrellaDamm": {
+            "name": "Estrella Damm",
+            "description": "Lager mediterránea clásica"
+          },
+          "cocaCola": {
+            "name": "Coca-Cola"
+          },
+          "fanta": {
+            "name": "Fanta Naranja"
+          },
+          "sprite": {
+            "name": "Sprite"
+          },
+          "teMoruno": {
+            "name": "Té Moruno",
+            "description": "Té de menta tradicional con azúcar"
+          },
+          "aguaMineral": {
+            "name": "Agua Mineral"
+          },
+          "redbull": {
+            "name": "Red Bull"
+          },
+          "tonica": {
+            "name": "Agua Tónica"
+          },
+          "zumoNaranja": {
+            "name": "Zumo de Naranja Natural"
+          }
+        }
+      },
+      "cocteles": {
+        "subtitle": "Cócteles elaborados con maestría para elevar tu velada",
+        "alcohol": {
+          "bajo": "Suave",
+          "medio": "Medio",
+          "alto": "Fuerte"
+        },
+        "items": {
+          "mojito": {
+            "name": "Mojito",
+            "description": "Menta fresca, lima, ron blanco y soda"
+          },
+          "cosmopolitan": {
+            "name": "Cosmopolitan",
+            "description": "Vodka, arándanos y lima - elegancia en un vaso"
+          },
+          "ginTonic": {
+            "name": "Gin Tonic Premium",
+            "description": "Gin premium con tónica artesana y botánicos"
+          },
+          "margarita": {
+            "name": "Margarita",
+            "description": "Tequila, lima y Cointreau con borde de sal"
+          },
+          "pinaColada": {
+            "name": "Piña Colada",
+            "description": "Mezcla tropical de ron, coco y piña"
+          },
+          "goatSpecial": {
+            "name": "The Goat Special",
+            "description": "Nuestro cóctel insignia - un misterio que vale la pena descubrir"
+          },
+          "oldFashioned": {
+            "name": "Old Fashioned",
+            "description": "Bourbon clásico con bitter y naranja"
+          },
+          "aperolSpritz": {
+            "name": "Aperol Spritz",
+            "description": "Aperitivo italiano con prosecco y soda"
+          },
+          "negroni": {
+            "name": "Negroni",
+            "description": "Gin, Campari y vermut rojo - audaz y amargo"
+          },
+          "espressoMartini": {
+            "name": "Espresso Martini",
+            "description": "Vodka, licor de café y espresso fresco"
+          }
+        }
+      },
+      "comida": {
+        "subtitle": "Delicias para complementar tu experiencia",
+        "dietary": {
+          "vegetarian": "Vegetariano",
+          "vegan": "Vegano",
+          "gluten-free": "Sin Gluten"
+        },
+        "items": {
+          "hummus": {
+            "name": "Hummus con Pan de Pita",
+            "description": "Dip cremoso de garbanzos con pan de pita caliente"
+          },
+          "cheeseBoard": {
+            "name": "Tabla de Quesos Artesanos",
+            "description": "Selección de quesos españoles con frutos secos y mermelada"
+          },
+          "olives": {
+            "name": "Aceitunas Mixtas",
+            "description": "Aceitunas mediterráneas marinadas"
+          },
+          "fries": {
+            "name": "Patatas Fritas Crujientes",
+            "description": "Patatas doradas con sal marina"
+          },
+          "nachos": {
+            "name": "Nachos Completos",
+            "description": "Chips de tortilla con queso, guacamole y salsa"
+          },
+          "wings": {
+            "name": "Alitas Picantes",
+            "description": "Alitas de pollo crujientes con salsa picante"
+          },
+          "babaGanoush": {
+            "name": "Baba Ganoush",
+            "description": "Dip ahumado de berenjena con tahini"
+          },
+          "mixedNuts": {
+            "name": "Frutos Secos Premium",
+            "description": "Selección de frutos secos tostados y sazonados"
+          },
+          "bruschetta": {
+            "name": "Bruschetta",
+            "description": "Pan tostado con tomate, albahaca y aceite de oliva"
+          },
+          "arabicBread": {
+            "name": "Cesta de Pan Árabe",
+            "description": "Pan plano caliente con salsas para mojar"
+          }
+        }
+      },
+      "filters": {
+        "all": "Todos",
+        "origin": "Origen",
+        "drawType": "Tipo de Tiro",
+        "intensity": "Nivel de Experiencia",
+        "flavorType": "Tipo de Sabor",
+        "strength": "Intensidad",
+        "origins": {
+          "alemania": "Alemania",
+          "egipto": "Egipto",
+          "espana": "España",
+          "rusia": "Rusia"
+        },
+        "drawTypes": {
+          "abierto": "Tiro Abierto",
+          "medio": "Medio",
+          "cerrado": "Cerrado"
+        },
+        "intensities": {
+          "signature": "Signature",
+          "premium": "Premium",
+          "standard": "Standard"
+        },
+        "flavorTypes": {
+          "frutal": "Frutal",
+          "mentolado": "Mentolado",
+          "dulce": "Dulce",
+          "especiado": "Especiado"
+        },
+        "strengths": {
+          "suave": "Suave",
+          "medio": "Medio",
+          "fuerte": "Fuerte"
+        }
+      },
+      "badges": {
+        "signature": "Signature",
+        "premium": "Premium",
+        "new": "Nuevo",
+        "popular": "Popular"
+      },
+      "actions": {
+        "details": "Ver Detalles"
+      },
+      "emptyState": "No hay productos que coincidan con tus filtros. Intenta ajustar tu selección.",
+      "cta": {
+        "title": "¿Listo para Visitarnos?",
+        "subtitle": "Ven a experimentar The Goat Lounge y disfruta de nuestra selección premium",
+        "button": "Contactar"
+      },
       "sections": {
         "shisha": "Shishas",
         "cocktails": "Cócteles",

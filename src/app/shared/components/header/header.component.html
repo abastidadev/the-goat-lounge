@@ -1,0 +1,100 @@
+<header [class]="headerClasses()">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20">
+    <!-- Desktop Layout: Grid with 3 columns -->
+    <div class="hidden lg:grid lg:grid-cols-3 items-center h-full">
+      <!-- Left: Logo -->
+      <button (click)="navigateToHome()" class="flex items-center gap-3 group justify-self-start cursor-pointer">
+        <img
+          src="/assets/images/logo.webp"
+          alt="The Goat Lounge Logo"
+          class="w-12 h-12 object-contain group-hover:scale-110 transition-transform"
+        />
+        <span class="text-xl font-serif font-bold text-white tracking-wide italic">
+          {{ 'general.applicationName' | transloco }}
+        </span>
+      </button>
+
+      <!-- Center: Navigation -->
+      <nav class="flex items-center justify-center gap-8">
+        @for (item of navItems(); track item.key) {
+          <button
+            (click)="handleNavClick(item)"
+            [class]="navButtonClasses(item)"
+          >
+            {{ 'shared.nav.' + item.key | transloco }}
+          </button>
+        }
+      </nav>
+
+      <!-- Right: Language Switcher -->
+      <div class="flex items-center justify-self-end">
+        <div class="flex gap-1 bg-black/30 p-1 rounded-md">
+          <button (click)="changeLang.emit('en')" [class]="langButtonClasses('en')">EN</button>
+          <button (click)="changeLang.emit('es')" [class]="langButtonClasses('es')">ES</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Layout: Flex -->
+    <div class="flex lg:hidden items-center justify-between h-full">
+      <!-- Logo -->
+      <button (click)="navigateToHome()" class="flex items-center gap-3 group cursor-pointer">
+        <img
+          src="/assets/images/logo.webp"
+          alt="The Goat Lounge Logo"
+          class="w-12 h-12 object-contain group-hover:scale-110 transition-transform"
+        />
+        <span class="text-xl font-serif font-bold text-white tracking-wide italic">
+          {{ 'general.applicationName' | transloco }}
+        </span>
+      </button>
+
+      <!-- Mobile Menu Toggle -->
+      <button
+        (click)="toggleMobileMenu.emit()"
+        class="text-white p-2"
+        aria-label="Toggle menu"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          @if (!mobileMenuOpen()) {
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          } @else {
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          }
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  @if (mobileMenuOpen()) {
+    <nav class="lg:hidden bg-black/95 backdrop-blur-lg border-t border-gold-500/20">
+      <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-2">
+        @for (item of navItems(); track item.key) {
+          <button
+            (click)="handleMobileNavClick(item)"
+            [class]="'px-4 py-2 text-left transition-colors rounded-md uppercase text-sm font-medium ' + (currentRoute() === item.key ? 'text-gold-400 bg-gold-500/10 border-l-4 border-gold-500' : 'text-gray-300 hover:text-gold-400 hover:bg-gold-500/10 border-l-4 border-transparent')"
+          >
+            {{ 'shared.nav.' + item.key | transloco }}
+          </button>
+        }
+        
+        <!-- Language Switcher (Mobile) -->
+        <div class="flex gap-1 bg-black/30 p-1 rounded-md mt-2">
+          <button (click)="changeLang.emit('en')" [class]="langButtonClasses('en') + ' flex-1'">EN</button>
+          <button (click)="changeLang.emit('es')" [class]="langButtonClasses('es') + ' flex-1'">ES</button>
+        </div>
+      </div>
+    </nav>
+  }
+</header>

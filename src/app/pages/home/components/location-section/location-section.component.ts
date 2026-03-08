@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, output } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { TranslocoPipe } from '@jsverse/transloco';
 import { RouterLink } from '@angular/router';
 
@@ -15,9 +15,6 @@ interface LocationInfo {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LocationSectionComponent {
-  // Outputs
-  readonly navigateToRoute = output<string>();
-
   // Data
   protected readonly locationInfo: LocationInfo[] = [
     { key: 'address', icon: '📍' },
