@@ -27,6 +27,9 @@
                 [src]="item.image.startsWith('http') ? item.image : '/assets/images/menu/cocteles/' + item.image"
                 [alt]="item.nameKey | transloco"
                 class="w-full h-full object-cover"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async"
               />
             </div>
           } @else {
