@@ -1,0 +1,6 @@
+# Netlify _redirects file
+# Backup SPA routing configuration (netlify.toml takes precedence)
+# This ensures Angular routes work with direct access and browser refresh
+
+# Redirect all non-file requests to index.html for SPA routing
+/*    /index.html    200
