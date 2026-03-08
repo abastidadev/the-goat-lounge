@@ -33,7 +33,7 @@ export class MenuHeaderComponent {
 
   // Computed
   protected readonly tabClasses = computed(() => (tabId: MenuTab) => {
-    const base = 'px-3 py-1.5 md:px-4 md:py-2 rounded-md font-bold uppercase text-sm tracking-wide transition-all whitespace-nowrap';
+    const base = 'flex items-center px-3 py-1.5 md:px-4 md:py-2 rounded-md font-bold uppercase text-sm tracking-wide transition-all whitespace-nowrap';
     const active = 'bg-gold-500 text-black shadow-lg shadow-gold-500/50';
     const inactive = 'bg-neutral-900 text-gray-300 hover:bg-neutral-800 hover:text-gold-400 border border-gold-500/20';
     

@@ -8,18 +8,18 @@
   </div>
 
   <!-- Filter Bar -->
-  <div class="flex justify-between gap-4 overflow-x-auto scrollbar-hide pb-2">
+  <div class="flex flex-col md:flex-row md:justify-center gap-4 pb-2">
     <!-- Origin Filter -->
-    <div class="flex items-center gap-2 flex-shrink-0">
-      <span class="text-xs font-semibold text-gold-400 uppercase tracking-wide">{{ 'pages.menu.filters.origin' | transloco }}:</span>
-      <div class="flex gap-1">
+    <div class="flex flex-col md:flex-row md:items-center gap-2 flex-shrink-0">
+      <span class="text-sm font-semibold text-gold-400 uppercase tracking-wide">{{ 'pages.menu.filters.origin' | transloco }}:</span>
+      <div class="flex flex-wrap gap-1">
         @for (filter of originFilters; track filter.id) {
           <button
             (click)="selectedOrigin.set(filter.value)"
             [class]="
               selectedOrigin() === filter.value
-                ? 'px-2 py-1 rounded-md bg-gold-500/20 border border-gold-500 text-gold-300 text-xs font-medium whitespace-nowrap transition-all'
-                : 'px-2 py-1 rounded-md bg-neutral-900 border border-neutral-700 text-gray-400 hover:text-gray-300 hover:border-gold-500/30 text-xs font-medium whitespace-nowrap transition-all'
+                ? 'px-3 py-1.5 rounded-md bg-gold-500/20 border border-gold-500 text-gold-300 text-sm font-medium whitespace-nowrap transition-all'
+                : 'px-3 py-1.5 rounded-md bg-neutral-900 border border-neutral-700 text-gray-400 hover:text-gray-300 hover:border-gold-500/30 text-sm font-medium whitespace-nowrap transition-all'
             "
           >
             {{ filter.labelKey | transloco }}
@@ -29,16 +29,16 @@
     </div>
 
     <!-- Draw Type Filter -->
-    <div class="flex items-center gap-2 flex-shrink-0">
-      <span class="text-xs font-semibold text-gold-400 uppercase tracking-wide">{{ 'pages.menu.filters.drawType' | transloco }}:</span>
-      <div class="flex gap-1">
+    <div class="flex flex-col md:flex-row md:items-center gap-2 flex-shrink-0">
+      <span class="text-sm font-semibold text-gold-400 uppercase tracking-wide">{{ 'pages.menu.filters.drawType' | transloco }}:</span>
+      <div class="flex flex-wrap gap-1">
         @for (filter of drawTypeFilters; track filter.id) {
           <button
             (click)="selectedDrawType.set(filter.value)"
             [class]="
               selectedDrawType() === filter.value
-                ? 'px-2 py-1 rounded-md bg-gold-500/20 border border-gold-500 text-gold-300 text-xs font-medium whitespace-nowrap transition-all'
-                : 'px-2 py-1 rounded-md bg-neutral-900 border border-neutral-700 text-gray-400 hover:text-gray-300 hover:border-gold-500/30 text-xs font-medium whitespace-nowrap transition-all'
+                ? 'px-3 py-1.5 rounded-md bg-gold-500/20 border border-gold-500 text-gold-300 text-sm font-medium whitespace-nowrap transition-all'
+                : 'px-3 py-1.5 rounded-md bg-neutral-900 border border-neutral-700 text-gray-400 hover:text-gray-300 hover:border-gold-500/30 text-sm font-medium whitespace-nowrap transition-all'
             "
           >
             {{ filter.labelKey | transloco }}
@@ -48,16 +48,16 @@
     </div>
 
     <!-- Intensity Filter -->
-    <div class="flex items-center gap-2 flex-shrink-0">
-      <span class="text-xs font-semibold text-gold-400 uppercase tracking-wide">{{ 'pages.menu.filters.intensity' | transloco }}:</span>
-      <div class="flex gap-1">
+    <div class="flex flex-col md:flex-row md:items-center gap-2 flex-shrink-0">
+      <span class="text-sm font-semibold text-gold-400 uppercase tracking-wide">{{ 'pages.menu.filters.intensity' | transloco }}:</span>
+      <div class="flex flex-wrap gap-1">
         @for (filter of intensityFilters; track filter.id) {
           <button
             (click)="selectedIntensity.set(filter.value)"
             [class]="
               selectedIntensity() === filter.value
-                ? 'px-2 py-1 rounded-md bg-gold-500/20 border border-gold-500 text-gold-300 text-xs font-medium whitespace-nowrap transition-all'
-                : 'px-2 py-1 rounded-md bg-neutral-900 border border-neutral-700 text-gray-400 hover:text-gray-300 hover:border-gold-500/30 text-xs font-medium whitespace-nowrap transition-all'
+                ? 'px-3 py-1.5 rounded-md bg-gold-500/20 border border-gold-500 text-gold-300 text-sm font-medium whitespace-nowrap transition-all'
+                : 'px-3 py-1.5 rounded-md bg-neutral-900 border border-neutral-700 text-gray-400 hover:text-gray-300 hover:border-gold-500/30 text-sm font-medium whitespace-nowrap transition-all'
             "
           >
             {{ filter.labelKey | transloco }}
