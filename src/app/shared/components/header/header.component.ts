@@ -1,9 +1,14 @@
-import { Component, ChangeDetectionStrategy, input, output, computed, inject, effect } from '@angular/core';
+import { Component, ChangeDetectionStrategy, input, output, computed, inject, effect, signal } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { TranslocoPipe } from '@jsverse/transloco';
 import { NavigationService, type NavItem } from '../../services/navigation.service';
 import { filter } from 'rxjs/operators';
 import { toSignal } from '@angular/core/rxjs-interop';
+
+interface Language {
+  code: string;
+  label: string;
+}
 
 @Component({
   selector: 'app-header',
@@ -25,6 +30,23 @@ export class HeaderComponent {
   // Outputs
   readonly changeLang = output<string>();
   readonly toggleMobileMenu = output<void>();
+
+  // Language dropdown state
+  protected readonly langDropdownOpen = signal(false);
+
+  // Available languages
+  protected readonly availableLanguages: Language[] = [
+    { code: 'es', label: 'ES' },
+    { code: 'en', label: 'EN' },
+    { code: 'fr', label: 'FR' },
+    { code: 'de', label: 'DE' }
+  ];
+
+  // Current language display
+  protected readonly currentLanguageLabel = computed(() => {
+    const lang = this.availableLanguages.find(l => l.code === this.currentLang());
+    return lang?.label || 'ES';
+  });
 
   // Track navigation events
   private readonly navigationEnd$ = this.router.events.pipe(
@@ -54,13 +76,6 @@ export class HeaderComponent {
     return `${base} ${scrolled}`;
   });
 
-  protected langButtonClasses(lang: string): string {
-    const base = 'px-2 py-1 rounded-md transition-colors text-xs font-bold uppercase';
-    const active = 'bg-gold-500 text-black';
-    const inactive = 'bg-transparent text-gray-400 hover:text-gold-400';
-    return `${base} ${this.currentLang() === lang ? active : inactive}`;
-  }
-
   protected navButtonClasses(item: NavItem): string {
     const base = 'text-sm font-medium transition-colors tracking-wide uppercase pb-1';
     const isActive = this.currentRoute() === item.key;
@@ -81,5 +96,18 @@ export class HeaderComponent {
 
   protected navigateToHome(): void {
     this.navigationService.navigateTo({ key: 'shisha', type: 'route' });
+  }
+
+  protected toggleLangDropdown(): void {
+    this.langDropdownOpen.set(!this.langDropdownOpen());
+  }
+
+  protected selectLanguage(langCode: string): void {
+    this.changeLang.emit(langCode);
+    this.langDropdownOpen.set(false);
+  }
+
+  protected isCurrentLanguage(langCode: string): boolean {
+    return this.currentLang() === langCode;
   }
 }

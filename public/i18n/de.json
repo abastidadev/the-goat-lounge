@@ -1,0 +1,495 @@
+{
+  "shared": {
+    "nav": {
+      "shisha": "Startseite",
+      "carta": "Menü",
+      "contacto": "Kontakt"
+    },
+    "actions": {
+      "learnMore": "Mehr erfahren",
+      "viewMenu": "Menü ansehen",
+      "getInTouch": "Kontakt aufnehmen"
+    }
+  },
+  "general": {
+    "applicationName": "THE GOAT LOUNGE",
+    "tagline": "Cocktails, Shisha & Musik",
+    "languages": {
+      "es": "Spanisch",
+      "en": "Englisch",
+      "fr": "Französisch",
+      "de": "Deutsch"
+    }
+  },
+  "pages": {
+    "home": {
+      "nav": {
+        "essence": "Essenz",
+        "shisha": "Shisha",
+        "mixology": "Mixologie",
+        "contact": "Kontakt"
+      },
+      "hero": {
+        "eyebrow": "EXKLUSIVITÄT NEU DEFINIERT",
+        "title": "THE GOAT LOUNGE",
+        "subtitle": "Unvergessliche Nächte mit Premium-Cocktails, Shisha & Musik schaffen.",
+        "cta": "Reservieren Sie Ihr Erlebnis",
+        "ctaSecondary": "Menü erkunden",
+        "scrollDown": "Mehr entdecken"
+      },
+      "features": {
+        "title": "Was wir bieten",
+        "cocktails": {
+          "title": "Großartige Cocktails",
+          "description": "Fachmännisch zubereitete Cocktails, die Ihre Sinne erfreuen werden"
+        },
+        "dancing": {
+          "title": "Perfekt zum Tanzen",
+          "description": "Die beste Atmosphäre zum Tanzen und Genießen der Nacht"
+        },
+        "shisha": {
+          "title": "Premium-Shishas",
+          "description": "Eine große Auswahl an Shishas mit einzigartigen Aromen"
+        }
+      },
+      "atmosphere": {
+        "title": "Unser Raum",
+        "subtitle": "Wo jede Ecke eine Geschichte erzählt",
+        "exterior": "Außenbereich",
+        "interior": "Innenbereich",
+        "bar": "Bar-Bereich"
+      },
+      "location": {
+        "title": "Wo Sie uns finden",
+        "subtitle": "Besuchen Sie uns in Jaén",
+        "address": "C. la Luna, 9, A, 23008 Jaén",
+        "hours": "Di-So 16:00-2:00 | Mo: Geschlossen",
+        "phone": "684 21 88 34",
+        "email": "info@thegoatlounge.com",
+        "labels": {
+          "address": "Adresse",
+          "hours": "Öffnungszeiten",
+          "phone": "Telefon",
+          "email": "E-Mail"
+        }
+      },
+      "footer": {
+        "about": {
+          "title": "The Goat Lounge",
+          "tagline": "Ihr Anlaufpunkt für Cocktails, Shisha und tolle Stimmung im Herzen von Jaén"
+        },
+        "contact": {
+          "title": "Kontakt",
+          "phone": "Telefon",
+          "email": "E-Mail",
+          "address": "Adresse"
+        },
+        "links": {
+          "title": "Schnelllinks",
+          "shisha": "Startseite",
+          "carta": "Menü",
+          "contacto": "Kontakt"
+        },
+        "copyright": "© 2026 The Goat Lounge. Alle Rechte vorbehalten."
+      }
+    },
+    "menu": {
+      "title": "Unser Menü",
+      "subtitle": "Entdecken Sie unsere Premium-Auswahl",
+      "placeholder": "Menüseite - In Entwicklung",
+      "hero": {
+        "title": "Unsere Karte",
+        "subtitle": "Entdecken Sie unsere Premium-Auswahl"
+      },
+      "tabs": {
+        "cachimbas": "Shishas",
+        "sabores": "Aromen",
+        "bebidas": "Getränke",
+        "cocteles": "Cocktails",
+        "comida": "Essen"
+      },
+      "categories": {
+        "cachimbas": "Shishas",
+        "sabores": "Aromen",
+        "bebidas": "Getränke",
+        "cocteles": "Cocktails",
+        "comida": "Essen"
+      },
+      "cachimbas": {
+        "subtitle": "Premium-Shisha-Kollektion für ein unvergessliches Erlebnis",
+        "items": {
+          "aeonEdition": {
+            "name": "Aeon Edition 4",
+            "description": "Deutsche Ingenieurskunst vom Feinsten - Edelstahl mit makellosem Zug"
+          },
+          "khalilMamoon": {
+            "name": "Khalil Mamoon Klassisch",
+            "description": "Traditionelle ägyptische Handwerkskunst mit authentischem Charakter"
+          },
+          "steamulation": {
+            "name": "Steamulation Pro X III",
+            "description": "Erstklassige deutsche Shisha mit revolutionärem Luftstromsystem"
+          },
+          "moze": {
+            "name": "Moze Breeze Two",
+            "description": "Modernes deutsches Design mit außergewöhnlicher Rauchqualität"
+          },
+          "oblako": {
+            "name": "Oblako M Undead",
+            "description": "Russische Innovation mit einzigartiger Ästhetik und sanftem Zug"
+          },
+          "maklaud": {
+            "name": "Maklaud Space Jam",
+            "description": "Russische Shisha mit ausgezeichnetem Preis-Leistungs-Verhältnis"
+          },
+          "wookah": {
+            "name": "Wookah Walnuss",
+            "description": "Spanische handgefertigte Shisha aus natürlichem Holz"
+          },
+          "japona": {
+            "name": "Japona Hookah Limited",
+            "description": "Spanisches Design mit mediterranem Stil und sanftem Zug"
+          },
+          "классический": {
+            "name": "Klassisch Russisch",
+            "description": "Traditionelle russische Shisha mit authentischem Geschmack"
+          }
+        }
+      },
+      "sabores": {
+        "subtitle": "Erkunden Sie unsere vielfältige Auswahl an Premium-Tabakaromen",
+        "items": {
+          "doubleMint": {
+            "name": "Doppelminze",
+            "description": "Intensive erfrischende Minzempfindung"
+          },
+          "watermelon": {
+            "name": "Wassermelone",
+            "description": "Süßer und saftiger Sommergeschmack"
+          },
+          "spicedApple": {
+            "name": "Gewürzter Apfel",
+            "description": "Warmer Apfel mit Zimtnoten"
+          },
+          "tropicalMix": {
+            "name": "Tropical Mix",
+            "description": "Exotischer Fruchtmix"
+          },
+          "blueberryMint": {
+            "name": "Blaubeere Minze",
+            "description": "Beerensüße mit kühler Minze"
+          },
+          "lemonPie": {
+            "name": "Zitronenkuchen",
+            "description": "Cremiger Zitronen-Dessert-Geschmack"
+          },
+          "passionFruit": {
+            "name": "Passionsfrucht",
+            "description": "Exotische tropische Säure"
+          },
+          "cola": {
+            "name": "Cola",
+            "description": "Klassischer Cola-Geschmack"
+          },
+          "peachIceTea": {
+            "name": "Pfirsich-Eistee",
+            "description": "Erfrischende Pfirsich-Tee-Mischung"
+          },
+          "cinnamonGum": {
+            "name": "Zimt-Kaugummi",
+            "description": "Würziger Zimt-Kick"
+          },
+          "grapeLemon": {
+            "name": "Traube Zitrone",
+            "description": "Süße Traube mit Zitrus-Twist"
+          },
+          "vanillaCream": {
+            "name": "Vanillecreme",
+            "description": "Sanftes Vanille-Dessert"
+          },
+          "mintChocolate": {
+            "name": "Minzschokolade",
+            "description": "Kühle Minze trifft auf reichhaltige Schokolade"
+          },
+          "raspberry": {
+            "name": "Himbeere",
+            "description": "Herber und süßer Beerengeschmack"
+          },
+          "caramel": {
+            "name": "Karamell",
+            "description": "Reichhaltiges butteriges Karamell"
+          }
+        }
+      },
+      "bebidas": {
+        "subtitle": "Erfrischen Sie sich mit unserer Getränkeauswahl",
+        "types": {
+          "cerveza": "Biere",
+          "refresco": "Softdrinks",
+          "te": "Tees",
+          "agua": "Wasser"
+        },
+        "items": {
+          "alhambraReserva": {
+            "name": "Alhambra Reserva",
+            "description": "Premium-Craft-Bier aus Granada"
+          },
+          "estrellaDamm": {
+            "name": "Estrella Damm",
+            "description": "Klassisches mediterranes Lager"
+          },
+          "cocaCola": {
+            "name": "Coca-Cola"
+          },
+          "fanta": {
+            "name": "Fanta Orange"
+          },
+          "sprite": {
+            "name": "Sprite"
+          },
+          "teMoruno": {
+            "name": "Marokkanischer Tee",
+            "description": "Traditioneller Minztee mit Zucker"
+          },
+          "aguaMineral": {
+            "name": "Mineralwasser"
+          },
+          "redbull": {
+            "name": "Red Bull"
+          },
+          "tonica": {
+            "name": "Tonic Water"
+          },
+          "zumoNaranja": {
+            "name": "Frischer Orangensaft"
+          }
+        }
+      },
+      "cocteles": {
+        "subtitle": "Fachmännisch zubereitete Cocktails zur Aufwertung Ihres Abends",
+        "alcohol": {
+          "bajo": "Leicht",
+          "medio": "Mittel",
+          "alto": "Stark"
+        },
+        "items": {
+          "mojito": {
+            "name": "Mojito",
+            "description": "Frische Minze, Limette, weißer Rum und Soda"
+          },
+          "cosmopolitan": {
+            "name": "Cosmopolitan",
+            "description": "Wodka, Cranberry und Limette - Eleganz im Glas"
+          },
+          "ginTonic": {
+            "name": "Gin & Tonic Premium",
+            "description": "Premium-Gin mit handwerklichem Tonic und Botanicals"
+          },
+          "margarita": {
+            "name": "Margarita",
+            "description": "Tequila, Limette und Cointreau mit Salzrand"
+          },
+          "pinaColada": {
+            "name": "Piña Colada",
+            "description": "Tropische Mischung aus Rum, Kokosnuss und Ananas"
+          },
+          "goatSpecial": {
+            "name": "The Goat Special",
+            "description": "Unser Signature-Cocktail - ein Geheimnis, das es zu entdecken lohnt"
+          },
+          "oldFashioned": {
+            "name": "Old Fashioned",
+            "description": "Klassischer Bourbon mit Bitter und Orange"
+          },
+          "aperolSpritz": {
+            "name": "Aperol Spritz",
+            "description": "Italienischer Aperitif mit Prosecco und Soda"
+          },
+          "negroni": {
+            "name": "Negroni",
+            "description": "Gin, Campari und roter Wermut - mutig und bitter"
+          },
+          "espressoMartini": {
+            "name": "Espresso Martini",
+            "description": "Wodka, Kaffeelikör und frischer Espresso"
+          }
+        }
+      },
+      "comida": {
+        "subtitle": "Leckere Kleinigkeiten zur Ergänzung Ihres Erlebnisses",
+        "dietary": {
+          "vegetarian": "Vegetarisch",
+          "vegan": "Vegan",
+          "gluten-free": "Glutenfrei"
+        },
+        "items": {
+          "hummus": {
+            "name": "Hummus mit Pita",
+            "description": "Cremiger Kichererbsen-Dip mit warmem Pita-Brot"
+          },
+          "cheeseBoard": {
+            "name": "Handwerkliche Käseplatte",
+            "description": "Auswahl spanischer Käsesorten mit Nüssen und Marmelade"
+          },
+          "olives": {
+            "name": "Gemischte Oliven",
+            "description": "Marinierte mediterrane Oliven"
+          },
+          "fries": {
+            "name": "Knusprige Pommes",
+            "description": "Goldene Pommes mit Meersalz"
+          },
+          "nachos": {
+            "name": "Nachos Deluxe",
+            "description": "Tortilla-Chips mit Käse, Guacamole und Salsa"
+          },
+          "wings": {
+            "name": "Scharfe Chicken Wings",
+            "description": "Knusprige Chicken Wings mit scharfer Sauce"
+          },
+          "babaGanoush": {
+            "name": "Baba Ganoush",
+            "description": "Rauchiger Auberginen-Dip mit Tahini"
+          },
+          "mixedNuts": {
+            "name": "Premium gemischte Nüsse",
+            "description": "Auswahl gerösteter und gewürzter Nüsse"
+          },
+          "bruschetta": {
+            "name": "Bruschetta",
+            "description": "Geröstetes Brot mit Tomate, Basilikum und Olivenöl"
+          },
+          "arabicBread": {
+            "name": "Arabischer Brotkorb",
+            "description": "Warmes Fladenbrot mit Dipsaucen"
+          }
+        }
+      },
+      "filters": {
+        "all": "Alle",
+        "origin": "Herkunft",
+        "drawType": "Zugtyp",
+        "intensity": "Erfahrungsgrad",
+        "flavorType": "Geschmackstyp",
+        "strength": "Stärke",
+        "origins": {
+          "alemania": "Deutschland",
+          "egipto": "Ägypten",
+          "espana": "Spanien",
+          "rusia": "Russland"
+        },
+        "drawTypes": {
+          "abierto": "Offener Zug",
+          "medio": "Mittel",
+          "cerrado": "Eingeschränkt"
+        },
+        "intensities": {
+          "signature": "Signature",
+          "premium": "Premium",
+          "standard": "Standard"
+        },
+        "flavorTypes": {
+          "frutal": "Fruchtig",
+          "mentolado": "Minzig",
+          "dulce": "Süß",
+          "especiado": "Würzig"
+        },
+        "strengths": {
+          "suave": "Mild",
+          "medio": "Mittel",
+          "fuerte": "Stark"
+        }
+      },
+      "badges": {
+        "signature": "Signature",
+        "premium": "Premium",
+        "new": "Neu",
+        "popular": "Beliebt"
+      },
+      "actions": {
+        "details": "Details"
+      },
+      "emptyState": "Keine Artikel entsprechen Ihren Filtern. Versuchen Sie, Ihre Auswahl anzupassen.",
+      "cta": {
+        "title": "Bereit für einen Besuch?",
+        "subtitle": "Erleben Sie The Goat Lounge und genießen Sie unsere Premium-Auswahl",
+        "button": "Kontaktieren Sie uns"
+      },
+      "sections": {
+        "shisha": "Shisha",
+        "cocktails": "Cocktails",
+        "drinks": "Getränke"
+      }
+    },
+    "contact": {
+      "title": "Kontaktieren Sie uns",
+      "subtitle": "Wir sind für Sie da",
+      "heroDescription": "Haben Sie eine Frage, möchten Sie reservieren oder eine private Veranstaltung organisieren? Wir würden uns freuen, von Ihnen zu hören.",
+      "quickResponse": "Schnelle Antwort",
+      "quickResponseDesc": "Wir antworten innerhalb von 24 Stunden",
+      "visitUs": "Besuchen Sie uns",
+      "visitUsDesc": "Im Herzen von Jaén, leichter Zugang",
+      "secure": "100% Sicher",
+      "multiLanguage": "Mehrsprachig",
+      "multiLanguageDesc": "Englisch, Spanisch und mehr",
+      "info": {
+        "title": "Kontakt aufnehmen",
+        "address": "C. la Luna, 9, A, 23008 Jaén",
+        "hours": "Di-So 16:00-2:00 | Mo: Geschlossen",
+        "phone": "684 21 88 34",
+        "email": "info@thegoatlounge.com",
+        "instagram": "@thegoatlounge"
+      },
+      "labels": {
+        "address": "Adresse",
+        "hours": "Öffnungszeiten",
+        "phone": "Telefon",
+        "email": "E-Mail",
+        "instagram": "Instagram"
+      },
+      "form": {
+        "title": "Senden Sie uns eine Nachricht",
+        "name": "Name",
+        "email": "E-Mail",
+        "phone": "Telefon (optional)",
+        "subject": "Betreff",
+        "message": "Nachricht",
+        "messagePlaceholder": "Sagen Sie uns, wie wir Ihnen helfen können...",
+        "submit": "Nachricht senden",
+        "submitting": "Wird gesendet...",
+        "success": "Nachricht erfolgreich gesendet! Wir melden uns bald bei Ihnen.",
+        "subjects": {
+          "general": "Allgemeine Anfrage",
+          "reservation": "Reservierung",
+          "event": "Private Veranstaltung",
+          "other": "Sonstiges"
+        },
+        "errors": {
+          "required": "Dieses Feld ist erforderlich",
+          "minLength": "Mindestens 2 Zeichen erforderlich",
+          "minLengthMessage": "Mindestens 10 Zeichen erforderlich",
+          "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein"
+        }
+      },
+      "map": {
+        "title": "Finden Sie uns",
+        "subtitle": "Besuchen Sie uns im Herzen von Jaén"
+      },
+      "actions": {
+        "googleMaps": "Google Maps",
+        "waze": "Waze"
+      },
+      "additional": {
+        "parking": "Parken",
+        "parkingInfo": "La Victoria (4-6 Min. zu Fuß)",
+        "bus": "Bushaltestelle",
+        "busInfo": "Av. Madrid (3 Min.) - 11 Linien"
+      }
+    },
+    "notFound": {
+      "title": "Seite nicht gefunden",
+      "message": "Entschuldigung, die gesuchte Seite existiert nicht.",
+      "action": "Zurück zur Startseite"
+    }
+  }
+}

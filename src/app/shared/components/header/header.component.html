@@ -5,7 +5,7 @@
       <!-- Left: Logo -->
       <button (click)="navigateToHome()" class="flex items-center gap-3 group justify-self-start cursor-pointer">
         <img
-          src="/assets/images/logo.webp"
+          src="/assets/images/logo-transparent.png"
           alt="The Goat Lounge Logo"
           class="w-12 h-12 object-contain group-hover:scale-110 transition-transform"
         />
@@ -26,12 +26,43 @@
         }
       </nav>
 
-      <!-- Right: Language Switcher -->
-      <div class="flex items-center justify-self-end">
-        <div class="flex gap-1 bg-black/30 p-1 rounded-md">
-          <button (click)="changeLang.emit('en')" [class]="langButtonClasses('en')">EN</button>
-          <button (click)="changeLang.emit('es')" [class]="langButtonClasses('es')">ES</button>
-        </div>
+      <!-- Right: Language Switcher Dropdown -->
+      <div class="flex items-center justify-self-end relative">
+        <button
+          (click)="toggleLangDropdown()"
+          class="flex items-center gap-2 px-2 py-1 bg-black/30 rounded-md hover:bg-black/50 transition-colors"
+        >
+          <span class="text-gold-400 font-bold text-sm">{{ currentLanguageLabel() }}</span>
+          <svg
+            class="w-4 h-4 text-gold-400 transition-transform"
+            [class.rotate-180]="langDropdownOpen()"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+
+        <!-- Dropdown Menu -->
+        @if (langDropdownOpen()) {
+          <div class="absolute top-full right-0 mt-2 bg-black/95 backdrop-blur-md rounded-md shadow-lg border border-gold-500/20 min-w-[120px] overflow-hidden">
+            @for (lang of availableLanguages; track lang.code) {
+              <button
+                (click)="selectLanguage(lang.code)"
+                class="w-full px-4 py-2 text-left text-sm font-medium transition-colors flex items-center justify-between"
+                [class]="isCurrentLanguage(lang.code) ? 'bg-gold-500/20 text-gold-400' : 'text-gray-300 hover:bg-gold-500/10 hover:text-gold-400'"
+              >
+                <span>{{ 'general.languages.' + lang.code | transloco }}</span>
+                @if (isCurrentLanguage(lang.code)) {
+                  <svg class="w-4 h-4 text-gold-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                }
+              </button>
+            }
+          </div>
+        }
       </div>
     </div>
 
@@ -40,7 +71,7 @@
       <!-- Logo -->
       <button (click)="navigateToHome()" class="flex items-center gap-3 group cursor-pointer">
         <img
-          src="/assets/images/logo.webp"
+          src="/assets/images/logo-transparent.png"
           alt="The Goat Lounge Logo"
           class="w-12 h-12 object-contain group-hover:scale-110 transition-transform"
         />
@@ -90,9 +121,41 @@
         }
         
         <!-- Language Switcher (Mobile) -->
-        <div class="flex gap-1 bg-black/30 p-1 rounded-md mt-2">
-          <button (click)="changeLang.emit('en')" [class]="langButtonClasses('en') + ' flex-1'">EN</button>
-          <button (click)="changeLang.emit('es')" [class]="langButtonClasses('es') + ' flex-1'">ES</button>
+        <div class="relative mt-2">
+          <button
+            (click)="toggleLangDropdown()"
+            class="w-full flex items-center justify-between px-4 py-2 bg-black/30 rounded-md hover:bg-black/50 transition-colors"
+          >
+            <span class="text-gold-400 font-bold text-sm">{{ currentLanguageLabel() }}</span>
+            <svg
+              class="w-4 h-4 text-gold-400 transition-transform"
+              [class.rotate-180]="langDropdownOpen()"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          @if (langDropdownOpen()) {
+            <div class="mt-1 bg-black/95 backdrop-blur-md rounded-md shadow-lg border border-gold-500/20 overflow-hidden">
+              @for (lang of availableLanguages; track lang.code) {
+                <button
+                  (click)="selectLanguage(lang.code)"
+                  class="w-full px-4 py-2 text-left text-sm font-medium transition-colors flex items-center justify-between"
+                  [class]="isCurrentLanguage(lang.code) ? 'bg-gold-500/20 text-gold-400' : 'text-gray-300 hover:bg-gold-500/10 hover:text-gold-400'"
+                >
+                  <span>{{ 'general.languages.' + lang.code | transloco }}</span>
+                  @if (isCurrentLanguage(lang.code)) {
+                    <svg class="w-4 h-4 text-gold-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                  }
+                </button>
+              }
+            </div>
+          }
         </div>
       </div>
     </nav>

@@ -1,0 +1,495 @@
+{
+  "shared": {
+    "nav": {
+      "shisha": "Accueil",
+      "carta": "Menu",
+      "contacto": "Contact"
+    },
+    "actions": {
+      "learnMore": "En savoir plus",
+      "viewMenu": "Voir le menu",
+      "getInTouch": "Nous contacter"
+    }
+  },
+  "general": {
+    "applicationName": "THE GOAT LOUNGE",
+    "tagline": "Cocktails, Chicha & Musique",
+    "languages": {
+      "es": "Espagnol",
+      "en": "Anglais",
+      "fr": "Français",
+      "de": "Allemand"
+    }
+  },
+  "pages": {
+    "home": {
+      "nav": {
+        "essence": "Essence",
+        "shisha": "Chicha",
+        "mixology": "Mixologie",
+        "contact": "Contact"
+      },
+      "hero": {
+        "eyebrow": "L'EXCLUSIVITÉ REDÉFINIE",
+        "title": "THE GOAT LOUNGE",
+        "subtitle": "Créer des nuits inoubliables avec des cocktails premium, chicha et musique.",
+        "cta": "Réservez votre expérience",
+        "ctaSecondary": "Explorer le menu",
+        "scrollDown": "En savoir plus"
+      },
+      "features": {
+        "title": "Ce que nous offrons",
+        "cocktails": {
+          "title": "Excellents cocktails",
+          "description": "Cocktails savamment préparés qui raviront vos sens"
+        },
+        "dancing": {
+          "title": "Parfait pour danser",
+          "description": "La meilleure ambiance pour danser et profiter de la nuit"
+        },
+        "shisha": {
+          "title": "Chichas premium",
+          "description": "Une grande variété de chichas avec des saveurs uniques"
+        }
+      },
+      "atmosphere": {
+        "title": "Notre espace",
+        "subtitle": "Où chaque coin raconte une histoire",
+        "exterior": "Extérieur",
+        "interior": "Intérieur",
+        "bar": "Espace bar"
+      },
+      "location": {
+        "title": "Où nous trouver",
+        "subtitle": "Visitez-nous à Jaén",
+        "address": "C. la Luna, 9, A, 23008 Jaén",
+        "hours": "Mar-Dim 16h00-2h00 | Lun: Fermé",
+        "phone": "684 21 88 34",
+        "email": "info@thegoatlounge.com",
+        "labels": {
+          "address": "Adresse",
+          "hours": "Horaires",
+          "phone": "Téléphone",
+          "email": "Email"
+        }
+      },
+      "footer": {
+        "about": {
+          "title": "The Goat Lounge",
+          "tagline": "Votre destination pour les cocktails, la chicha et une ambiance conviviale au cœur de Jaén"
+        },
+        "contact": {
+          "title": "Contact",
+          "phone": "Téléphone",
+          "email": "Email",
+          "address": "Adresse"
+        },
+        "links": {
+          "title": "Liens rapides",
+          "shisha": "Accueil",
+          "carta": "Menu",
+          "contacto": "Contact"
+        },
+        "copyright": "© 2026 The Goat Lounge. Tous droits réservés."
+      }
+    },
+    "menu": {
+      "title": "Notre Menu",
+      "subtitle": "Découvrez notre sélection premium",
+      "placeholder": "Page de menu - En développement",
+      "hero": {
+        "title": "Notre Carte",
+        "subtitle": "Découvrez notre sélection premium"
+      },
+      "tabs": {
+        "cachimbas": "Chichas",
+        "sabores": "Saveurs",
+        "bebidas": "Boissons",
+        "cocteles": "Cocktails",
+        "comida": "Nourriture"
+      },
+      "categories": {
+        "cachimbas": "Chichas",
+        "sabores": "Saveurs",
+        "bebidas": "Boissons",
+        "cocteles": "Cocktails",
+        "comida": "Nourriture"
+      },
+      "cachimbas": {
+        "subtitle": "Collection premium de chichas pour une expérience inoubliable",
+        "items": {
+          "aeonEdition": {
+            "name": "Aeon Edition 4",
+            "description": "Ingénierie allemande à son meilleur - acier inoxydable avec tirage impeccable"
+          },
+          "khalilMamoon": {
+            "name": "Khalil Mamoon Classique",
+            "description": "Artisanat égyptien traditionnel avec caractère authentique"
+          },
+          "steamulation": {
+            "name": "Steamulation Pro X III",
+            "description": "Chicha allemande haut de gamme avec système de flux d'air révolutionnaire"
+          },
+          "moze": {
+            "name": "Moze Breeze Two",
+            "description": "Design allemand moderne avec qualité de fumée exceptionnelle"
+          },
+          "oblako": {
+            "name": "Oblako M Undead",
+            "description": "Innovation russe avec esthétique unique et tirage doux"
+          },
+          "maklaud": {
+            "name": "Maklaud Space Jam",
+            "description": "Chicha russe avec excellent rapport qualité-prix"
+          },
+          "wookah": {
+            "name": "Wookah Noyer",
+            "description": "Chicha artisanale espagnole fabriquée à la main en bois naturel"
+          },
+          "japona": {
+            "name": "Japona Hookah Limited",
+            "description": "Design espagnol avec style méditerranéen et tirage doux"
+          },
+          "классический": {
+            "name": "Classique Russe",
+            "description": "Chicha russe traditionnelle avec goût authentique"
+          }
+        }
+      },
+      "sabores": {
+        "subtitle": "Explorez notre sélection diversifiée de tabacs premium",
+        "items": {
+          "doubleMint": {
+            "name": "Double Menthe",
+            "description": "Sensation rafraîchissante de menthe intense"
+          },
+          "watermelon": {
+            "name": "Pastèque",
+            "description": "Saveur sucrée et juteuse d'été"
+          },
+          "spicedApple": {
+            "name": "Pomme Épicée",
+            "description": "Pomme chaude avec notes de cannelle"
+          },
+          "tropicalMix": {
+            "name": "Mix Tropical",
+            "description": "Mélange de fruits exotiques"
+          },
+          "blueberryMint": {
+            "name": "Myrtille Menthe",
+            "description": "Douceur des baies avec menthe fraîche"
+          },
+          "lemonPie": {
+            "name": "Tarte au Citron",
+            "description": "Saveur crémeuse de dessert au citron"
+          },
+          "passionFruit": {
+            "name": "Fruit de la Passion",
+            "description": "Acidité tropicale exotique"
+          },
+          "cola": {
+            "name": "Cola",
+            "description": "Goût classique de cola"
+          },
+          "peachIceTea": {
+            "name": "Thé Glacé Pêche",
+            "description": "Mélange rafraîchissant de thé et pêche"
+          },
+          "cinnamonGum": {
+            "name": "Chewing-gum Cannelle",
+            "description": "Touche épicée de cannelle"
+          },
+          "grapeLemon": {
+            "name": "Raisin Citron",
+            "description": "Raisin sucré avec touche d'agrumes"
+          },
+          "vanillaCream": {
+            "name": "Crème Vanille",
+            "description": "Dessert doux à la vanille"
+          },
+          "mintChocolate": {
+            "name": "Menthe Chocolat",
+            "description": "Menthe fraîche rencontre chocolat riche"
+          },
+          "raspberry": {
+            "name": "Framboise",
+            "description": "Saveur de baie acidulée et sucrée"
+          },
+          "caramel": {
+            "name": "Caramel",
+            "description": "Caramel riche et beurré"
+          }
+        }
+      },
+      "bebidas": {
+        "subtitle": "Rafraîchissez-vous avec notre sélection de boissons",
+        "types": {
+          "cerveza": "Bières",
+          "refresco": "Sodas",
+          "te": "Thés",
+          "agua": "Eau"
+        },
+        "items": {
+          "alhambraReserva": {
+            "name": "Alhambra Reserva",
+            "description": "Bière artisanale premium de Grenade"
+          },
+          "estrellaDamm": {
+            "name": "Estrella Damm",
+            "description": "Lager méditerranéenne classique"
+          },
+          "cocaCola": {
+            "name": "Coca-Cola"
+          },
+          "fanta": {
+            "name": "Fanta Orange"
+          },
+          "sprite": {
+            "name": "Sprite"
+          },
+          "teMoruno": {
+            "name": "Thé Marocain",
+            "description": "Thé à la menthe traditionnel avec sucre"
+          },
+          "aguaMineral": {
+            "name": "Eau Minérale"
+          },
+          "redbull": {
+            "name": "Red Bull"
+          },
+          "tonica": {
+            "name": "Eau Tonique"
+          },
+          "zumoNaranja": {
+            "name": "Jus d'Orange Frais"
+          }
+        }
+      },
+      "cocteles": {
+        "subtitle": "Cocktails savamment préparés pour sublimer votre soirée",
+        "alcohol": {
+          "bajo": "Léger",
+          "medio": "Moyen",
+          "alto": "Fort"
+        },
+        "items": {
+          "mojito": {
+            "name": "Mojito",
+            "description": "Menthe fraîche, citron vert, rhum blanc et soda"
+          },
+          "cosmopolitan": {
+            "name": "Cosmopolitan",
+            "description": "Vodka, canneberge et citron vert - élégance en verre"
+          },
+          "ginTonic": {
+            "name": "Gin & Tonic Premium",
+            "description": "Gin premium avec tonique artisanale et botaniques"
+          },
+          "margarita": {
+            "name": "Margarita",
+            "description": "Tequila, citron vert et Cointreau avec bord salé"
+          },
+          "pinaColada": {
+            "name": "Piña Colada",
+            "description": "Mélange tropical de rhum, coco et ananas"
+          },
+          "goatSpecial": {
+            "name": "The Goat Special",
+            "description": "Notre cocktail signature - un mystère qui vaut la peine d'être découvert"
+          },
+          "oldFashioned": {
+            "name": "Old Fashioned",
+            "description": "Bourbon classique avec bitters et orange"
+          },
+          "aperolSpritz": {
+            "name": "Aperol Spritz",
+            "description": "Apéritif italien avec prosecco et soda"
+          },
+          "negroni": {
+            "name": "Negroni",
+            "description": "Gin, Campari et vermouth rouge - audacieux et amer"
+          },
+          "espressoMartini": {
+            "name": "Espresso Martini",
+            "description": "Vodka, liqueur de café et espresso frais"
+          }
+        }
+      },
+      "comida": {
+        "subtitle": "Délicieuses bouchées pour compléter votre expérience",
+        "dietary": {
+          "vegetarian": "Végétarien",
+          "vegan": "Végétalien",
+          "gluten-free": "Sans Gluten"
+        },
+        "items": {
+          "hummus": {
+            "name": "Houmous avec Pita",
+            "description": "Trempette crémeuse aux pois chiches avec pain pita chaud"
+          },
+          "cheeseBoard": {
+            "name": "Plateau de Fromages Artisanaux",
+            "description": "Sélection de fromages espagnols avec noix et confiture"
+          },
+          "olives": {
+            "name": "Olives Mélangées",
+            "description": "Olives méditerranéennes marinées"
+          },
+          "fries": {
+            "name": "Frites Croustillantes",
+            "description": "Frites dorées avec sel de mer"
+          },
+          "nachos": {
+            "name": "Nachos Garnis",
+            "description": "Chips de tortilla avec fromage, guacamole et salsa"
+          },
+          "wings": {
+            "name": "Ailes Épicées",
+            "description": "Ailes de poulet croustillantes avec sauce piquante"
+          },
+          "babaGanoush": {
+            "name": "Baba Ganoush",
+            "description": "Trempette d'aubergine fumée avec tahini"
+          },
+          "mixedNuts": {
+            "name": "Noix Mélangées Premium",
+            "description": "Sélection de noix grillées et assaisonnées"
+          },
+          "bruschetta": {
+            "name": "Bruschetta",
+            "description": "Pain grillé avec tomate, basilic et huile d'olive"
+          },
+          "arabicBread": {
+            "name": "Panier de Pain Arabe",
+            "description": "Pain plat chaud avec sauces pour tremper"
+          }
+        }
+      },
+      "filters": {
+        "all": "Tous",
+        "origin": "Origine",
+        "drawType": "Type de Tirage",
+        "intensity": "Niveau d'Expérience",
+        "flavorType": "Type de Saveur",
+        "strength": "Force",
+        "origins": {
+          "alemania": "Allemagne",
+          "egipto": "Égypte",
+          "espana": "Espagne",
+          "rusia": "Russie"
+        },
+        "drawTypes": {
+          "abierto": "Tirage Ouvert",
+          "medio": "Moyen",
+          "cerrado": "Restreint"
+        },
+        "intensities": {
+          "signature": "Signature",
+          "premium": "Premium",
+          "standard": "Standard"
+        },
+        "flavorTypes": {
+          "frutal": "Fruité",
+          "mentolado": "Menthé",
+          "dulce": "Sucré",
+          "especiado": "Épicé"
+        },
+        "strengths": {
+          "suave": "Doux",
+          "medio": "Moyen",
+          "fuerte": "Fort"
+        }
+      },
+      "badges": {
+        "signature": "Signature",
+        "premium": "Premium",
+        "new": "Nouveau",
+        "popular": "Populaire"
+      },
+      "actions": {
+        "details": "Détails"
+      },
+      "emptyState": "Aucun élément ne correspond à vos filtres. Essayez d'ajuster votre sélection.",
+      "cta": {
+        "title": "Prêt à nous rendre visite?",
+        "subtitle": "Venez découvrir The Goat Lounge et profiter de notre sélection premium",
+        "button": "Nous contacter"
+      },
+      "sections": {
+        "shisha": "Chicha",
+        "cocktails": "Cocktails",
+        "drinks": "Boissons"
+      }
+    },
+    "contact": {
+      "title": "Contactez-nous",
+      "subtitle": "Nous sommes là pour vous",
+      "heroDescription": "Vous avez une question, vous souhaitez faire une réservation ou organiser un événement privé? Nous serions ravis de vous entendre.",
+      "quickResponse": "Réponse Rapide",
+      "quickResponseDesc": "Nous répondons sous 24 heures",
+      "visitUs": "Visitez-nous",
+      "visitUsDesc": "Cœur de Jaén, accès facile",
+      "secure": "100% Sécurisé",
+      "multiLanguage": "Multi-langue",
+      "multiLanguageDesc": "Anglais, Espagnol et plus",
+      "info": {
+        "title": "Prenez contact",
+        "address": "C. la Luna, 9, A, 23008 Jaén",
+        "hours": "Mar-Dim 16h00-2h00 | Lun: Fermé",
+        "phone": "684 21 88 34",
+        "email": "info@thegoatlounge.com",
+        "instagram": "@thegoatlounge"
+      },
+      "labels": {
+        "address": "Adresse",
+        "hours": "Horaires d'ouverture",
+        "phone": "Téléphone",
+        "email": "Email",
+        "instagram": "Instagram"
+      },
+      "form": {
+        "title": "Envoyez-nous un message",
+        "name": "Nom",
+        "email": "Email",
+        "phone": "Téléphone (optionnel)",
+        "subject": "Sujet",
+        "message": "Message",
+        "messagePlaceholder": "Dites-nous comment nous pouvons vous aider...",
+        "submit": "Envoyer le message",
+        "submitting": "Envoi en cours...",
+        "success": "Message envoyé avec succès! Nous vous répondrons bientôt.",
+        "subjects": {
+          "general": "Demande Générale",
+          "reservation": "Réservation",
+          "event": "Événement Privé",
+          "other": "Autre"
+        },
+        "errors": {
+          "required": "Ce champ est obligatoire",
+          "minLength": "Minimum 2 caractères requis",
+          "minLengthMessage": "Minimum 10 caractères requis",
+          "invalidEmail": "Veuillez entrer un email valide"
+        }
+      },
+      "map": {
+        "title": "Trouvez-nous",
+        "subtitle": "Visitez-nous au cœur de Jaén"
+      },
+      "actions": {
+        "googleMaps": "Google Maps",
+        "waze": "Waze"
+      },
+      "additional": {
+        "parking": "Parking",
+        "parkingInfo": "La Victoria (4-6 min à pied)",
+        "bus": "Arrêt de Bus",
+        "busInfo": "Av. Madrid (3 min) - 11 lignes"
+      }
+    },
+    "notFound": {
+      "title": "Page non trouvée",
+      "message": "Désolé, la page que vous recherchez n'existe pas.",
+      "action": "Retour à l'accueil"
+    }
+  }
+}
