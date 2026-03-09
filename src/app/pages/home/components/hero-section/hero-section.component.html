@@ -40,13 +40,13 @@
     <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
       <button
         (click)="navigateToContact()"
-        class="px-8 py-4 bg-gold-500 hover:bg-gold-600 border-2 border-gold-500 text-black font-bold text-base tracking-wide uppercase rounded-md transition-all hover:scale-105 shadow-2xl shadow-gold-500/40"
+        class="px-8 py-4 bg-gold-500 hover:bg-gold-600 border-2 border-gold-500 hover:border-gold-600 text-black font-bold text-base tracking-wide uppercase rounded-md transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-gold-500/30"
       >
         {{ 'pages.home.hero.cta' | transloco }}
       </button>
       <button
         (click)="navigateToMenu()"
-        class="px-8 py-4 bg-transparent border-2 border-white hover:bg-white hover:text-black text-white font-bold text-base tracking-wide uppercase rounded-md transition-all"
+        class="px-8 py-4 bg-transparent hover:bg-gold-500 border-2 border-gold-500 hover:border-gold-600 text-gold-400 hover:text-black font-bold text-base tracking-wide uppercase rounded-md transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-gold-500/30"
       >
         {{ 'pages.home.hero.ctaSecondary' | transloco }}
       </button>
